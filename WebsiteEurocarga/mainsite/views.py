@@ -7,3 +7,11 @@ def index(request):
         "key": 0,
     }
     return render(request, 'mainsite/index.html', context)
+
+def about(request):
+
+    
+    context = {
+        "key": 0,
+    }
+    return render(request, 'mainsite/about.html', context)
