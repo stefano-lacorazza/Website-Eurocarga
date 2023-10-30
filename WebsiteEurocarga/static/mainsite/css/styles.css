@@ -254,8 +254,8 @@ main {
 .profile {
     background-color: var(--primary-bg);
     border-radius: 8px;
-    height: 180px;
-    width: 350px;
+    height: 130px;
+    width: 500px;
     position: relative;
     overflow: hidden;
     transition: height 0.2s ease;
@@ -269,7 +269,7 @@ main {
         cursor: pointer;
     }
     .profile.profile--expanded {
-        height: 240px;
+        height: 650px;
         animation: expand 0.5s ease;
     }
     .profile__banner {
@@ -318,7 +318,7 @@ main {
             width: 100%;
             text-align: center;
             padding-top: inherit;
-            height: 66px;
+            height: 166px;
             position: absolute;
             top: 168px;
 

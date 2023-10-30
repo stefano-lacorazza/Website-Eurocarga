@@ -1,4 +1,4 @@
-function expand(card) {
+function expanded(card) {
     card.classList.toggle('profile--expanded');
 
     // If card is not expanded after toggle, add 'unexpanded' class
@@ -6,6 +6,10 @@ function expand(card) {
     // Else if card is expanded after toggle and still contains 'unexpanded' class, remove 'unexpanded'
     else if (card.classList.contains('profile--expanded') && card.classList.contains('profile--unexpanded')) card.classList.toggle('profile--unexpanded');
 }
+
+
+
+
 
 // Modal Image Gallery
 function onClick(element) {

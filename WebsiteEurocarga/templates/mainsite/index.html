@@ -5,10 +5,12 @@
 <title>EuroCarga</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="{% static 'mainsite/css/style.css' %}">
+
+<link rel="stylesheet" href="{% static 'mainsite/css/styles.css' %}">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
 body, html {
   height: 100%;
@@ -77,7 +79,7 @@ body, html {
 
 </style>
 </head>
-<body>
+<body style="background-color:#FFFFFF">
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
@@ -116,65 +118,21 @@ body, html {
 
 
 <main>
-    <div class="profile" onclick="expand(this)">
-        <div class="profile__banner" style="background-color: rgb(153,255,204);"></div>
-        <div>
-
-            <div class="profile__info">
-                <span class="profile__info-display">Cho Miyeon</span>
-                <span class="profile__info-username">@ramyeon</span>
-            </div>
-        </div>
-        <div class="profile__data">
-            <span class="profile__data-following">
-                <span class="profile__data-following-number">32</span>
-                <span class="profile__data-following-label">Following</span>
-            </span>
-            <span class="profile__data-followers">
-                <span class="profile__data-followers-number">6M</span>
-                <span class="profile__data-following-label">Followers</span>
-            </span>
-            <span class="profile__data-likes">
-                <span class="profile__data-likes-number">502</span>
-                <span class="profile__data-likes-label">Likes</span>
-            </span>
-        </div>
-    </div>
+    
 
   <!------Container  Servicios ------>
 
 <div class="w3-col l4">
   <!--  Servicio 1-->
-  <div class="w3-card w3-margin w3-margin-top profile" onmouseover="expand(this)" onmouseout="expand(this)" >
-  
-    <div class="w3-container w3-white w3-display-container w3-text-white">
-      <img src="{% static 'mainsite/images/transaereo.jpg' %}"  style="width:100%">
-      <div class="w3-display-middle w3-large">
-      <h4><b>TRANSPORTE AÉREO</b></h4>
-    
-      </div>
-        
-        </div>
-        <div class="dropdown">
-          <button class="w3-button w3-round">Más Información</button>
-          <div class="dropdown-content">
-          <img src="{% static 'mainsite/images/ship-background.jpg' %}" alt="Cinque Terre" width="300" height="200">
-          <div class="desc">Beautiful Cinque Terre</div>
-          </div>
-
-
-    </div>
-  </div>
-</div>
-
-<div class="w3-col l4">
-  <!--  Servicio 1-->
-  <div class="w3-card w3-margin w3-margin-top w3-hover-shadow">
+  <div class="profile w3-card w3-margin w3-margin-top " onmouseover="expand(this)" onmouseout="expand(this)" >
   
     <div class="w3-container w3-white w3-display-container w3-text-white ">
-      <img src="{% static 'mainsite/images/transaereo.jpg' %}"  style="width:100%">
-      <div class="w3-display-middle w3-large">
+      <img src="{% static 'mainsite/images/transaereo.jpg' %}"  style="width:200%">
+      <div class="w3-display-topmiddle w3-large ">
+        <br>
+        
       <h4><b>TRANSPORTE AÉREO</b></h4>
+      <br>
       <p>Rapidez y agilidad para la entrega de cargas, trabajamos desde la experiencia y le damos valor
         agregado desde el conocimiento en documentos y procedimientos.
         Con EUROCARGA sus mercancías viajarán en 1° clase, desde su recolección hasta su entrega,
@@ -182,73 +140,131 @@ body, html {
         mejores opciones para que vuele seguro</p>
       </div>
         
-        </div>
-        <div class="dropdown">
-          <button class="w3-button w3-round">Más Información</button>
-          <div class="dropdown-content">
-            <span class="w3-large">RELACIONES</span><br>
-            Conexiones con las aerolíneas y su cadena profesional.
-            
-
-
-          
-          </div>
+    
+   
 
 
     </div>
   </div>
+</div>
+
+<div class="w3-col l4">
+  <!--  Servicio 2-->
+  <div class="profile w3-card w3-margin w3-margin-top " onmouseover="expand(this)" onmouseout="expand(this)" >
+  
+    <div class="w3-container w3-white w3-display-container w3-text-white ">
+      <img src="{% static 'mainsite/images/trans-maritimo.jpg' %}"  style="width:100%">
+      <div class="w3-display-topmiddle w3-large ">
+        <br>
+        
+      <h4><b>TRANSPORTE MARÍTIMO</b></h4>
+      <br>
+      <p>A nivel internacional, gracias a su red de cobertura entre aliados estratégicos, nuestras
+        excelentes relaciones con las navieras nos permiten ofrecer a nuestros clientes respaldo y
+        cumplimiento; además en EUROCARGA hay un gran equipo humano, dotado de experiencia
+        en procesos marítimos que de acuerdo a las necesidades tanto en importación como en
+        exportación y triangulaciones aportarán las soluciones más confiables.</p>
+      </div>
+        
+    
+   
+
+
+    </div>
+  </div>
+</div>
 </div>
 <div class="w3-col l4">
-  <!--  Servicio 1-->
-  <div class="w3-card w3-margin w3-margin-top">
+  <!--  Servicio 3-->
+  <div class="profile w3-card w3-margin w3-margin-top " onmouseover="expand(this)" onmouseout="expand(this)" >
   
-    <div class="w3-container w3-white w3-display-container w3-text-white">
-      <img src="{% static 'mainsite/images/transaereo.jpg' %}"  style="width:100%">
-      <div class="w3-display-middle w3-large">
-      <h4><b>TRANSPORTE AÉREO</b></h4>
-      <p>Rapidez y agilidad para la entrega de cargas, trabajamos desde la experiencia y le damos valor
-        agregado desde el conocimiento en documentos y procedimientos.
-        Con EUROCARGA sus mercancías viajarán en 1° clase, desde su recolección hasta su entrega,
-        sin importar el tamaño, tipo o valor de la carga, siempre se evaluará y se recomendarán las
-        mejores opciones para que vuele seguro</p>
+    <div class="w3-container w3-white w3-display-container w3-text-white ">
+      <img src="{% static 'mainsite/images/trans-terrestre.jpg' %}"  style="width:100%">
+      <div class="w3-display-topmiddle w3-large ">
+        <br>
+        
+      <h4><b>TRANSPORTE TERRESTRE</b></h4>
+      <br>
+      <p>El terrestre se ha convertido en la solución a cualquier necesidad de
+        conexión local, regional y nacional más utilizada</p>
       </div>
         
-        </div>
-        <div class="dropdown">
-          <button class="w3-button w3-round">Más Información</button>
-          <div class="dropdown-content">
-          <img src="{% static 'mainsite/images/ship-background.jpg' %}" alt="Cinque Terre" width="300" height="200">
-          <div class="desc">Beautiful Cinque Terre</div>
-          </div>
+    
+   
 
 
     </div>
   </div>
 </div>
+
 
 
 
 
 
 <div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center">ABOUT ME</h3>
-  <p class="w3-center"><em>I love photography</em></p>
-  <p>We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-    qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  <div class="w3-row">
-    <div class="w3-col m6 w3-center w3-padding-large">
-      <p><b><i class="fa fa-user w3-margin-right"></i>My Name</b></p><br>
-      <img src="/w3images/avatar_hat.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
-    </div>
+  <h3 class="w3-center">¿Por qué elegirnos?</h3>
 
-    <!-- Hide this text on small devices -->
-    <div class="w3-col m6 w3-hide-small w3-padding-large">
-      <p>Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-  </div>
+  <p>Transportamos su mercancía con confianza y cumplimiento, comprometidos con sus necesidades.
+    Nuestra dedicación a la puntualidad y la seguridad garantiza la entrega de sus productos en óptimas
+    condiciones y en el plazo acordado. Además, nuestro equipo altamente capacitado se esfuerza por
+    ofrecer un servicio excepcional, brindando tranquilidad y eficiencia en cada paso del proceso de
+    transporte.</p>
+    
+    <ul class="w3-ul ">
+      <li class="w3-bar">
+        <img src="img_avatar2.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+        <div class="w3-bar-item">
+          <span>Trabajamos de
+            forma eficiente
+            </span>
+        </div>
+      </li>
+      <li class="w3-bar">
+        <img src="img_avatar2.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+        <div class="w3-bar-item">
+          <span>Tenemos un
+            excelente equipo de
+            trabajo adaptado a
+            las necesidades de la
+            carga de los clientes</span>
+        </div>
+      </li>
+      <li class="w3-bar">
+        <img src="img_avatar2.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+        <div class="w3-bar-item">
+          <span>Creamos
+            soluciones
+            logísticas</span>
+        </div>
+      </li>
+      <li class="w3-bar">
+        <img src="img_avatar2.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+        <div class="w3-bar-item">
+          <span>Actuamos de
+            forma urgente y
+            estamos abiertos
+            al cambio
+            </span>
+        </div>
+      </li>
+      <li class="w3-bar">
+        <img src="img_avatar2.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+        <div class="w3-bar-item">
+          <span>Administramos y
+            vigilamos a nivel
+            nacional e
+            internacional las
+            cargas
+            “Puerta-Puerta”
+            a tiempo
+            </span>
+        </div>
+      </li>
+    </ul>
+
+
+  
   <p class="w3-large w3-center w3-padding-16">Im really good at:</p>
   <p class="w3-wide"><i class="fa fa-camera"></i>Photography</p>
   <div class="w3-light-grey">
