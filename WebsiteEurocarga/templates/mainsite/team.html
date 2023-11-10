@@ -62,29 +62,6 @@ body, html {
     min-height: 400px;
   }
 }
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.desc {
-  padding: 15px;
-  text-align: center;
-}
-
 
 </style>
 </head>
@@ -100,18 +77,25 @@ body, html {
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu" >
-      <i class="fa fa-bars"></i>
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu" id="myNavbar"></a>
+      
     </a>
     <a href="{% url 'index' %}" class="w3-bar-item w3-button "><img src = "{% static 'mainsite/images/logo-noback.jpg' %}" style="width:30%;opacity:0" id="toplogo" /></a>
     <a href="{% url 'index' %}" class="w3-bar-item w3-button" style = "padding: 1em;"><b>HOME</b></a>
     <a href="{% url 'about' %}" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>QUIENES SOMOS</b></a>
     <a href="#oficinas" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>OFICINAS</b></a>
     <a href="#pqr" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>PQRS</b></a>
-    <a href="#equipo" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>NUESTRO EQUIPO</b></a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <a href="{% url 'team' %}" class="w3-button w3-hide-small w3-button" style = "padding: 1em;"><b>DEPARTAMENTOS</b> <i class="fa fa-caret-down"></i></a>     
+        <div class="w3-dropdown-content w3-bar-block w3-card-4">
+          <a href="#imports" class="w3-bar-item w3-button" >IMPORTACIÓN</a>
+          <a href="#exports" class="w3-bar-item w3-button">EXPORTACIÓN</a>
+          <a href="#conta" class="w3-bar-item w3-button">CONTABILIDAD</a>
+        </div>
+    </div>
     <a href="#tracking" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>RASTREO DE PAQUETES</b></a>
-    </a>
   </div>
+</div>
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
@@ -146,13 +130,13 @@ body, html {
 
     
 <!-- Second Parallax Image with Portfolio Text -->
-<div class="bgimg-2 w3-display-container w3-opacity-min">
+<div class="bgimg-2 w3-display-container w3-opacity-min" id="imports">
     <div class="w3-display-middle">
       <span class="w3-xxlarge w3-text-white w3-wide">IMPORTACIÓN</span>
     </div>
 </div>
 
-<div class="w3-content w3-container w3-padding-64" id="about">
+<div class="w3-content w3-container w3-padding-64" >
     
   
     <p>En EUROCARGA, nuestro Departamento de Importaciones es el núcleo de nuestro compromiso con la eficiencia y la precisión.
@@ -187,13 +171,13 @@ body, html {
 </div>
 
 <!-- Third Parallax Image with Portfolio Text -->
-<div class="bgimg-3 w3-display-container w3-opacity-min">
+<div class="bgimg-3 w3-display-container w3-opacity-min" id="exports">
     <div class="w3-display-middle">
        <span class="w3-xxlarge w3-text-white w3-wide"> EXPORTACIÓN</span>
     </div>
   </div>
 
-  <div class="w3-content w3-container w3-padding-64" id="about">
+  <div class="w3-content w3-container w3-padding-64" >
     
   
     <p>En el Departamento de Exportaciones de EUROCARGA, estamos dedicados a llevar sus productos a nuevos mercados globales.
@@ -228,13 +212,13 @@ body, html {
 </div>
 
 <!-- Fourth Parallax Image with Portfolio Text -->
-<div class="bgimg-4 w3-display-container w3-opacity-min">
+<div class="bgimg-4 w3-display-container w3-opacity-min" id="conta">
     <div class="w3-display-middle">
        <span class="w3-xxlarge w3-text-white w3-wide">CONTABILIDAD</span>
     </div>
   </div>
 
-  <div class="w3-content w3-container w3-padding-64" id="about">
+  <div class="w3-content w3-container w3-padding-64" >
     
   
     <p>En EUROCARGA, confiamos en nuestra experta contadora para mantener la integridad financiera en todas nuestras transacciones. 
