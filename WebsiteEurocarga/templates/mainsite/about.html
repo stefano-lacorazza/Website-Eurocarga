@@ -74,30 +74,30 @@ body, html {
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
-    <div class="w3-bar" id="myNavbar">
-      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-        <i class="fa fa-bars"></i>
-      </a>
-      <a href="{% url 'index' %}" class="w3-bar-item w3-button">HOME</a>
-      <a href="{% url 'about' %}" class="w3-bar-item w3-button w3-hide-small"> QUIENES SOMOS</a>
-      <a href="#oficinas" class="w3-bar-item w3-button w3-hide-small"> OFICINAS</a>
-      <a href="#pqr" class="w3-bar-item w3-button w3-hide-small"> PQRS</a>
-      <a href="#equipo" class="w3-bar-item w3-button w3-hide-small"> NUESTRO EQUIPO</a>
-      <a href="#tracking" class="w3-bar-item w3-button w3-hide-small"> RASTREO DE PAQUETES</a>
-      </a>
-    </div>
-  
-    <!-- Navbar on small screens -->
-    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-      <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">QUIENES SOMOS</a>
-      <a href="#oficinas"" class="w3-bar-item w3-button" onclick="toggleFunction()">OFICINAS</a>
-      <a href="#pqr" class="w3-bar-item w3-button" onclick="toggleFunction()">PQRS</a>
-      <a href="#equipo" class="w3-bar-item w3-button" onclick="toggleFunction()">NUESTRO EQUIPO</a>
-      <a href="#tracking" class="w3-bar-item w3-button" onclick="toggleFunction()">RASTREO DE PAQUETES</a>
-      <a href="#" class="w3-bar-item w3-button">SEARCH</a>
-    </div>
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu" >
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="{% url 'index' %}" class="w3-bar-item w3-button "><img src = "{% static 'mainsite/images/logo-noback.jpg' %}" style="width:30%;opacity:0" id="toplogo" /></a>
+    <a href="{% url 'index' %}" class="w3-bar-item w3-button" style = "padding: 1em;"><b>HOME</b></a>
+    <a href="{% url 'about' %}" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>QUIENES SOMOS</b></a>
+    <a href="#oficinas" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>OFICINAS</b></a>
+    <a href="#pqr" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>PQRS</b></a>
+    <a href="{% url 'team' %}" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>NUESTRO EQUIPO</b></a>
+    <a href="#tracking" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>RASTREO DE PAQUETES</b></a>
+    </a>
   </div>
 
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">QUIENES SOMOS</a>
+    <a href="#oficinas" class="w3-bar-item w3-button" onclick="toggleFunction()">OFICINAS</a>
+    <a href="#pqr" class="w3-bar-item w3-button" onclick="toggleFunction()">PQRS</a>
+    <a href="#equipo" class="w3-bar-item w3-button" onclick="toggleFunction()">NUESTRO EQUIPO</a>
+    <a href="#tracking" class="w3-bar-item w3-button" onclick="toggleFunction()">RASTREO DE PAQUETES</a>
+    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+  </div>
+</div>
   <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
     <div class="w3-display-middle">
@@ -112,18 +112,18 @@ body, html {
   
 
 <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
-    <div class="w3-content">
-      <div class="w3-center">
+  <div class="w3-content">
+    <div class="w3-center">
         <h1>
             EUROCARGA</h1>
         <h5 class="w3-padding-32">Somos una agencia de carga internacional especializada en simplificar y optimizar las operaciones de logística para exportaciones e importaciones a nivel global. Nuestra misión es brindar soluciones personalizadas y eficientes que cubran todas sus necesidades logísticas. Con años de experiencia en la industria, nuestro equipo altamente capacitado y una red global de socios estratégicos, nos enorgullece ofrecer servicios de envío confiables, seguros y rentables. Ya sea que necesite transportar sus productos a mercados internacionales o importar mercancías de todo el mundo, en EUROCARGA estamos listos para superar sus expectativas y garantizar la entrega puntual de sus mercancías a cualquier destino. Permítanos ser su socio de confianza en el mundo de la logística internacional</h5>
   
             <h5 class="w3-padding-32">Con una sólida trayectoria que se extiende desde 1983, EUROCARGA se ha consolidado como un pilar confiable en la industria de la logística en Bogotá, Colombia. Durante décadas, hemos brindado servicios de exportación e importación de primer nivel a clientes de todo el mundo, estableciendo relaciones sólidas y duraderas. Nuestra presencia a largo plazo en Bogotá es un testimonio de nuestro compromiso con la excelencia, la integridad y la satisfacción del cliente. En EUROCARGA, nos enorgullecemos de nuestra herencia y experiencia, y continuamos liderando el camino en la logística internacional con un enfoque constante en la calidad y la confiabilidad</h5>
-      </div>
+    </div>
   
       
-    </div>
   </div>
+</div>
 
 
     <div class="w3-row-padding w3-padding-64 w3-container">
@@ -160,7 +160,7 @@ body, html {
 <div class="w3-container w3-padding-64 w3-center" id="team">
     <h2>Nuestro Equipo</h2>
     
-    <div class="w3-row"><br>
+  <div class="w3-row"><br>
     
     <div class="w3-quarter">
       <img src="{% static 'mainsite/images/equipo/Boss.png' %}" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
@@ -186,8 +186,8 @@ body, html {
       <p>Comercial</p>
     </div>
     
-    </div>
-    </div>
+  </div>
+</div>
     
   
   
@@ -220,7 +220,7 @@ body, html {
     
   <script src="{% static 'mainsite/js/javs.js' %}"></script>
   
-  
+</main>
   </body>
   </html>
   

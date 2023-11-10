@@ -15,3 +15,11 @@ def about(request):
         "key": 0,
     }
     return render(request, 'mainsite/about.html', context)
+
+def team(request):
+
+    
+    context = {
+        "key": 0,
+    }
+    return render(request, 'mainsite/team.html', context)
