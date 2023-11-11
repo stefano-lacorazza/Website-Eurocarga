@@ -12,6 +12,7 @@ urlpatterns = [
     path("", views.index, name="index"),
     path("about/", views.about, name="about"),
     path("team/", views.team, name="team"),
+    path("services/", views.services, name="services"),
     path("admin/", admin.site.urls),
 ]
 if settings.DEBUG:

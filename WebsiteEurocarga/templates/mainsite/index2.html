@@ -96,20 +96,10 @@ body, html {
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu" id="myNavbar"></a>
       
     </a>
-    <a href="{% url 'index' %}" class="w3-bar-item w3-button"><img src = "{% static 'mainsite/images/logo-noback.png' %}" width="100  " style="opacity:0;" id="toplogo" /></a>
+    <a href="{% url 'index' %}" class="w3-bar-item w3-button "><img src = "{% static 'mainsite/images/logo-noback.jpg' %}" style="width:30%;opacity:0" id="toplogo" /></a>
     <a href="{% url 'index' %}" class="w3-bar-item w3-button" style = "padding: 1em;"><b>HOME</b></a>
     <a href="{% url 'about' %}" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>QUIENES SOMOS</b></a>
     <a href="#oficinas" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>OFICINAS</b></a>
-    
-    <div class="w3-dropdown-hover w3-hide-small">
-      <a href="{% url 'services' %}" class="w3-button w3-hide-small w3-button" style = "padding: 1em;"><b>SERVICIOS</b> <i class="fa fa-caret-down"></i></a>     
-        <div class="w3-dropdown-content w3-bar-block w3-card-4">
-          <a href="#imports" class="w3-bar-item w3-button" >TRANSPORTE AÉREO</a>
-          <a href="#exports" class="w3-bar-item w3-button">TRANSPORTE TERRESTRE</a>
-          <a href="#conta" class="w3-bar-item w3-button">TRANSPORTE MARÍTIMO</a>
-          <a href="#conta" class="w3-bar-item w3-button">AGENCIAMIENTO ADUANERO</a>
-        </div>
-    </div>
     <a href="#pqr" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>PQRS</b></a>
     <div class="w3-dropdown-hover w3-hide-small">
       <a href="{% url 'team' %}" class="w3-button w3-hide-small w3-button" style = "padding: 1em;"><b>DEPARTAMENTOS</b> <i class="fa fa-caret-down"></i></a>     
@@ -122,8 +112,6 @@ body, html {
     <a href="#tracking" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>RASTREO DE PAQUETES</b></a>
   </div>
 </div>
-
-
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
@@ -142,7 +130,7 @@ body, html {
 
 <div class="bgimg-1 w3-display-container w3-opacity-min">
   <div class="w3-display-middle" >
-    <span class="w3-center w3-padding-large w3-animate-opacity"><img src="{% static 'mainsite/images/Logo-white.png' %}" style="width:100%"></span>
+    <span class="w3-center w3-padding-large w3-animate-opacity"><img src="{% static 'mainsite/images/logo.svg' %}" style="width:100%"></span>
   </div>
   <video autoplay loop id="vid" muted width="100%">
     <source src="{% static 'mainsite/videos/World.mp4' %}" type="video/mp4">
@@ -150,60 +138,180 @@ body, html {
 </div>
 
 
-<div class="w3-row-padding w3-grayscale" style="margin-top:64px">
-  <h3 class="w3-center">Servicios</h3>
-  <div class="w3-col l3 m6 w3-margin-bottom">
+
+
+
     
-    <div class="w3-card">
+
+  <!------Container  Servicios ------>
+<div class="w3-row">
+  <div class="w3-col l4 w3-container w3-quarter" >
+    <!--  Servicio 1-->
+    <div class="profile w3-card w3-margin w3-margin-top " onmouseover="expanded(this)" onmouseout="expanded(this)" >
+    
+      <div class="w3-container w3-white w3-display-container w3-text-white ">
+        <img src="{% static 'mainsite/images/transaereo.jpg' %}"  style="width:200%">
+        <div class="w3-display-topmiddle w3-large ">
+          <br>
+          
+        <h4><b>TRANSPORTE AÉREO</b></h4>
+        <br>
+        <p>Rapidez y agilidad para la entrega de cargas, trabajamos desde la experiencia y le damos valor
+          agregado desde el conocimiento en documentos y procedimientos.
+          Con EUROCARGA sus mercancías viajarán en 1° clase, desde su recolección hasta su entrega,
+          sin importar el tamaño, tipo o valor de la carga, siempre se evaluará y se recomendarán las
+          mejores opciones para que vuele seguro</p>
+          <a href="#" class="w3-btn w3-white">Más información</a>
+          
+
+
+        </div>
+          
       
-      <div class="w3-container">
-        <h3>TRANSPORTE <br>AÉREO</h3>
-        <p>Conectamos negocios alrededor del mundo con nuestro servicio aéreo de exportación e importación, asegurando envíos
-           eficientes y rápidos para un comercio global sin complicaciones.</p>
-        <p><button class="w3-button w3-light-grey w3-block">Más información</p>
+    
+
+
       </div>
     </div>
   </div>
-  <div class="w3-col l3 m6 w3-margin-bottom">
-    <div class="w3-card">
+
+  <div class="w3-col l4 w3-container w3-quarter">
+    <!--  Servicio 2-->
+    <div class="profile w3-card w3-margin w3-margin-top " onmouseover="expanded(this)" onmouseout="expanded(this)" >
+    
+      <div class="w3-container w3-white w3-display-container w3-text-white ">
+        <img src="{% static 'mainsite/images/trans-maritimo.jpg' %}"  style="width:100%">
+        <div class="w3-display-topmiddle w3-large ">
+          <br>
+          
+        <h4><b>TRANSPORTE MARÍTIMO</b></h4>
+        <br>
+        <p>A nivel internacional, gracias a su red de cobertura entre aliados estratégicos, nuestras
+          excelentes relaciones con las navieras nos permiten ofrecer a nuestros clientes respaldo y
+          cumplimiento; además en EUROCARGA hay un gran equipo humano, dotado de experiencia
+          en procesos marítimos que de acuerdo a las necesidades tanto en importación como en
+          exportación y triangulaciones aportarán las soluciones más confiables.</p>
+          <a href="#" class="w3-btn w3-white">Más información</a>
+        </div>
+          
       
-      <div class="w3-container">
-        <h3>TRANSPORTE TERRESTRE</h3>
-        
-        <p>"Optimizamos el comercio internacional con nuestro servicio terrestre de exportación e importación, brindando 
-          soluciones logísticas eficientes y seguras para conectar mercados y empresas</p>
-        <p><button class="w3-button w3-light-grey w3-block">Más información</button></p>
+    
+
+
       </div>
     </div>
   </div>
-  <div class="w3-col l3 m6 w3-margin-bottom">
-    <div class="w3-card">
+  
+  <div class="w3-col l4 w3-container w3-quarter">
+    <!--  Servicio 3-->
+    <div class="profile w3-card w3-margin w3-margin-top " onmouseover="expanded(this)" onmouseout="expanded(this)" >
+    
+      <div class="w3-container w3-white w3-display-container w3-text-white ">
+        <img src="{% static 'mainsite/images/trans-terrestre.jpg' %}"  style="width:100%">
+        <div class="w3-display-topmiddle w3-large ">
+          <br>
+          
+        <h4><b>TRANSPORTE TERRESTRE</b></h4>
+        <br>
+        <p>El terrestre se ha convertido en la solución a cualquier necesidad de
+          conexión local, regional y nacional más utilizada</p>
+          <a href="#" class="w3-btn w3-white">Más información</a>
+        </div>
+          
       
-      <div class="w3-container">
-        <h3>TRANSPORTE <br>MARÍTIMO</h3>
-        
-        <p>Facilitamos el intercambio global con nuestro servicio marítimo de exportación e importación, ofreciendo soluciones
-           logísticas confiables para conectar mercados y optimizar la cadena de suministro</p>
-        <p><button class="w3-button w3-light-grey w3-block">Más información</button></p>
-      </div>
-    </div>
-  </div>
-  <div class="w3-col l3 m6 w3-margin-bottom">
-    <div class="w3-card">
-      
-      <div class="w3-container">
-        <h3>AGENCIAMIENTO ADUANERO
-          </h3>
-        
-        <p>Agilizamos el flujo internacional de mercancías con nuestro servicio de agenciamiento aduanero, garantizando una
-           gestión eficiente y sin complicaciones en los trámites.</p>
-        <p><button class="w3-button w3-light-grey w3-block">Más información</button></p>
+    
+
+
       </div>
     </div>
   </div>
 </div>
 
+<div class="w3-row"></div>
+  <div class="w3-col l4 w3-container w3-quarter" >
+    <!--  Servicio 1-->
+    <div class="profile w3-card w3-margin w3-margin-top " onmouseover="expanded(this)" onmouseout="expanded(this)" >
     
+      <div class="w3-container w3-white w3-display-container w3-text-white ">
+        <img src="{% static 'mainsite/images/transaereo.jpg' %}"  style="width:200%">
+        <div class="w3-display-topmiddle w3-large ">
+          <br>
+          
+        <h4><b>TRANSPORTE AÉREO</b></h4>
+        <br>
+        <p>Rapidez y agilidad para la entrega de cargas, trabajamos desde la experiencia y le damos valor
+          agregado desde el conocimiento en documentos y procedimientos.
+          Con EUROCARGA sus mercancías viajarán en 1° clase, desde su recolección hasta su entrega,
+          sin importar el tamaño, tipo o valor de la carga, siempre se evaluará y se recomendarán las
+          mejores opciones para que vuele seguro</p>
+          <a href="#" class="w3-btn w3-white">Más información</a>
+          
+
+
+        </div>
+          
+      
+    
+
+
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-col l4 w3-container w3-quarter">
+    <!--  Servicio 2-->
+    <div class="profile w3-card w3-margin w3-margin-top " onmouseover="expanded(this)" onmouseout="expanded(this)" >
+    
+      <div class="w3-container w3-white w3-display-container w3-text-white ">
+        <img src="{% static 'mainsite/images/trans-maritimo.jpg' %}"  style="width:100%">
+        <div class="w3-display-topmiddle w3-large ">
+          <br>
+          
+        <h4><b>TRANSPORTE MARÍTIMO</b></h4>
+        <br>
+        <p>A nivel internacional, gracias a su red de cobertura entre aliados estratégicos, nuestras
+          excelentes relaciones con las navieras nos permiten ofrecer a nuestros clientes respaldo y
+          cumplimiento; además en EUROCARGA hay un gran equipo humano, dotado de experiencia
+          en procesos marítimos que de acuerdo a las necesidades tanto en importación como en
+          exportación y triangulaciones aportarán las soluciones más confiables.</p>
+          <a href="#" class="w3-btn w3-white">Más información</a>
+        </div>
+          
+      
+    
+
+
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="w3-col l4 w3-container w3-quarter">
+    <!--  Servicio 3-->
+    <div class="profile w3-card w3-margin w3-margin-top " onmouseover="expanded(this)" onmouseout="expanded(this)" >
+    
+      <div class="w3-container w3-white w3-display-container w3-text-white ">
+        <img src="{% static 'mainsite/images/trans-terrestre.jpg' %}"  style="width:100%">
+        <div class="w3-display-topmiddle w3-large ">
+          <br>
+          
+        <h4><b>TRANSPORTE TERRESTRE</b></h4>
+        <br>
+        <p>El terrestre se ha convertido en la solución a cualquier necesidad de
+          conexión local, regional y nacional más utilizada</p>
+          <a href="#" class="w3-btn w3-white">Más información</a>
+        </div>
+          
+      
+    
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+
 <div class="w3-content w3-container w3-padding-64" id="about">
   <h3 class="w3-center">¿Por qué elegirnos?</h3>
 

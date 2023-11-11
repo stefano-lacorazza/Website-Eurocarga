@@ -2,7 +2,7 @@
 <html>
 {% load static %}
 <head>
-<title>EuroCarga - Quienes somos</title>
+<title>EuroCarga</title>
 <link rel="icon" type="image/x-icon" href="{% static 'mainsite/images/favicon.ico' %}">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,11 +29,22 @@ body, html {
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-  background-image: url("{% static 'mainsite/images/team.jpg' %}");
+
   min-height: 100%;
 }
 
 
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("{% static 'mainsite/images/trucks-background.jpg' %}");
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("{% static 'mainsite/images/ship-background.jpg' %}");
+  min-height: 400px;
+}
 
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
@@ -71,6 +82,13 @@ body, html {
 </style>
 </head>
 <body style="background-color:#FFFFFF">
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <a href="https://api.whatsapp.com/send?phone=573227381279&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n." class="float" target="_blank">
+  <i class="fa fa-whatsapp my-float"></i>
+  </a>
+
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
@@ -119,97 +137,30 @@ body, html {
 </div>
 
 
-  <!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-    <div class="w3-display-middle">
-        <span class="w3-xxlarge w3-text-white w3-wide">QUIENES SOMOS</span>
-      </div>
-</div>
-
 <main>
+
+
+
+
+
+
+
+
+
+
     
 
-<!-- First Grid -->
-  
-
-<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-center">
-        <h1>
-            EUROCARGA</h1>
-        <h5 class="w3-padding-32">Somos una agencia de carga internacional especializada en simplificar y optimizar las operaciones de logística para exportaciones e importaciones a nivel global. Nuestra misión es brindar soluciones personalizadas y eficientes que cubran todas sus necesidades logísticas. Con años de experiencia en la industria, nuestro equipo altamente capacitado y una red global de socios estratégicos, nos enorgullece ofrecer servicios de envío confiables, seguros y rentables. Ya sea que necesite transportar sus productos a mercados internacionales o importar mercancías de todo el mundo, en EUROCARGA estamos listos para superar sus expectativas y garantizar la entrega puntual de sus mercancías a cualquier destino. Permítanos ser su socio de confianza en el mundo de la logística internacional</h5>
-  
-            <h5 class="w3-padding-32">Con una sólida trayectoria que se extiende desde 1983, EUROCARGA se ha consolidado como un pilar confiable en la industria de la logística en Bogotá, Colombia. Durante décadas, hemos brindado servicios de exportación e importación de primer nivel a clientes de todo el mundo, estableciendo relaciones sólidas y duraderas. Nuestra presencia a largo plazo en Bogotá es un testimonio de nuestro compromiso con la excelencia, la integridad y la satisfacción del cliente. En EUROCARGA, nos enorgullecemos de nuestra herencia y experiencia, y continuamos liderando el camino en la logística internacional con un enfoque constante en la calidad y la confiabilidad</h5>
-    </div>
-  
-      
-  </div>
-</div>
-
-
-<div class="w3-row-padding w3-padding-64 w3-container">
-    <div class="w3-content">
-      <div class="w3-twothird">
-        <h1>NUESTRA
-            MISIÓN</h1>
-        <h5 class="w3-padding-32">Sostener un servicio íntegro y superior de agenciamiento en transporte de carga internacional, administrar los procesos logísticos con responsabilidad y seguridad, orientados a la satisfacción de nuestros clientes y al éxito de sus negocios, con una alta calidad en los procesos, enfocados hacia la eficiencia, productividad y rentabilidad tanto de importaciones, exportaciones y aliados clientes como de nuestra compañía, de acuerdo a tiempos pactados.</h5>
-  
-      </div>
-  
-      <div class="w3-third w3-center">
-        <img src="{% static 'mainsite/images/mision.jpg' %}" class="w3-circle" style="width:500px">
-      </div>
-    </div>
-  </div>
-
-  <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
-    <div class="w3-content">
-      <div class="w3-twothird">
-        <h1>NUESTRA VISIÓN</h1>
-        <h5 class="w3-padding-32">Posicionar a EUROCARGA S.A.S como empresa líder en procesos de logística integral, reconocidos a nivel tanto nacional como internacional como uno de los mejores agentes de carga internacional con calidad y servicio al cliente.</h5>
-  
-      </div>
-  
-      <div class="w3-third w3-center">
-        <img src="{% static 'mainsite/images/vision.jpg' %}" class="w3-circle" style="width:500px">
-      </div>
-    </div>
-  </div>
-  
-
-    
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- Footer -->
+<!-- Footer -->
 <footer class="w3-center w3-black w3-padding-32 ">
-    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Subir</a>
-    
-    <p> Desarrollado por:<a href="https://www.stefanolacorazza.com" title="W3.CSS" target="_blank" class="w3-hover-text-green">Stefano Lacorazza</a></p>
-  </footer>
-   <!-- SCRIPTS -->
-    
-  <script src="{% static 'mainsite/js/javs.js' %}"></script>
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Subir</a>
   
+  <p> Desarrollado por:<a href="https://www.stefanolacorazza.com" title="W3.CSS" target="_blank" class="w3-hover-text-green">Stefano Lacorazza</a></p>
+</footer>
+ <!-- SCRIPTS -->
+  
+<script src="{% static 'mainsite/js/javs.js' %}"></script>
+
+
 </main>
-  </body>
-  </html>
-  
+</body>
+</html>
