@@ -79,33 +79,34 @@ body, html {
       
     </a>
     <a href="{% url 'index' %}" class="w3-bar-item w3-button"><img src = "{% static 'mainsite/images/logo-noback.png' %}" width="100  " style="opacity:0;" id="toplogo" /></a>
-    <a href="{% url 'index' %}" class="w3-bar-item w3-button" style = "padding: 1em;"><b>HOME</b></a>
-    <a href="{% url 'about' %}" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>QUIENES SOMOS</b></a>
-    <a href="#oficinas" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>OFICINAS</b></a>
+    <div id="menu" style="color:white">
+      <a href="{% url 'index' %}" class="w3-bar-item w3-button" style = "padding: 1em;"><b>HOME</b></a>
+      <a href="{% url 'about' %}" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>QUIENES SOMOS</b></a>
+      <a href="#oficinas" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>OFICINAS</b></a>
+      
+      <div class="w3-dropdown-hover w3-hide-small">
+        <a href="{% url 'services' %}" class="w3-button w3-hide-small w3-button" style = "padding: 1em;"><b>SERVICIOS</b> <i class="fa fa-caret-down"></i></a>     
+          <div class="w3-dropdown-content w3-bar-block w3-card-4">
+            <a href="#imports" class="w3-bar-item w3-button" >TRANSPORTE AÉREO</a>
+            <a href="#exports" class="w3-bar-item w3-button">TRANSPORTE TERRESTRE</a>
+            <a href="#conta" class="w3-bar-item w3-button">TRANSPORTE MARÍTIMO</a>
+            <a href="#conta" class="w3-bar-item w3-button">AGENCIAMIENTO ADUANERO</a>
+          </div>
+      </div>
+      <a href="{% url 'pqrs' %}" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>PQRS</b></a>
+      <div class="w3-dropdown-hover w3-hide-small">
+        <a href="{% url 'team' %}" class="w3-button w3-hide-small w3-button" style = "padding: 1em;"><b>DEPARTAMENTOS</b> <i class="fa fa-caret-down"></i></a>     
+          <div class="w3-dropdown-content w3-bar-block w3-card-4">
+            <a href="#imports" class="w3-bar-item w3-button" >IMPORTACIÓN</a>
+            <a href="#exports" class="w3-bar-item w3-button">EXPORTACIÓN</a>
+            <a href="#conta" class="w3-bar-item w3-button">CONTABILIDAD</a>
+          </div>
+      </div>
     
-    <div class="w3-dropdown-hover w3-hide-small">
-      <a href="{% url 'services' %}" class="w3-button w3-hide-small w3-button" style = "padding: 1em;"><b>SERVICIOS</b> <i class="fa fa-caret-down"></i></a>     
-        <div class="w3-dropdown-content w3-bar-block w3-card-4">
-          <a href="#imports" class="w3-bar-item w3-button" >TRANSPORTE AÉREO</a>
-          <a href="#exports" class="w3-bar-item w3-button">TRANSPORTE TERRESTRE</a>
-          <a href="#conta" class="w3-bar-item w3-button">TRANSPORTE MARÍTIMO</a>
-          <a href="#conta" class="w3-bar-item w3-button">AGENCIAMIENTO ADUANERO</a>
-        </div>
+    <a href="{% url 'tracking' %}" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>RASTREO DE PAQUETES</b></a>
     </div>
-    <a href="#pqr" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>PQRS</b></a>
-    <div class="w3-dropdown-hover w3-hide-small">
-      <a href="{% url 'team' %}" class="w3-button w3-hide-small w3-button" style = "padding: 1em;"><b>DEPARTAMENTOS</b> <i class="fa fa-caret-down"></i></a>     
-        <div class="w3-dropdown-content w3-bar-block w3-card-4">
-          <a href="#imports" class="w3-bar-item w3-button" >IMPORTACIÓN</a>
-          <a href="#exports" class="w3-bar-item w3-button">EXPORTACIÓN</a>
-          <a href="#conta" class="w3-bar-item w3-button">CONTABILIDAD</a>
-        </div>
-    </div>
-    <a href="#tracking" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>RASTREO DE PAQUETES</b></a>
   </div>
 </div>
-
-
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
@@ -200,10 +201,28 @@ body, html {
 
 
   <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-32 ">
-    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Subir</a>
+  <footer>
+    <div class="footer">
+    <div class="row">
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-instagram"></i></a>
+    <a href="#"><i class="fa fa-youtube"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    </div>
     
-    <p> Desarrollado por:<a href="https://www.stefanolacorazza.com" title="W3.CSS" target="_blank" class="w3-hover-text-green">Stefano Lacorazza</a></p>
+    <div class="row">
+    <ul>
+    <li><a href="{% url 'pqrs' %}">Contactenos</a></li>
+    <li><a href="{% url 'services' %}">Servicios</a></li>
+    <li><a href="#">Política de Privacidad </a></li>
+    <li><a href="{% url 'tracking' %}">Rastreo</a></li>
+    </ul>
+    </div>
+    
+    <div class="row">
+    EUROCARGA © 2023  - Todos los derechos reservados
+    </div>
+    </div>
   </footer>
    <!-- SCRIPTS -->
     

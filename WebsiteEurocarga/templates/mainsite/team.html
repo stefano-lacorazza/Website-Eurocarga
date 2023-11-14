@@ -2,7 +2,7 @@
 <html>
 {% load static %}
 <head>
-<title>EuroCarga - Nuestro Equipo</title>
+<title>EuroCarga - Departamentos</title>
 <link rel="icon" type="image/x-icon" href="{% static 'mainsite/images/favicon.ico' %}">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,7 +29,7 @@ body, html {
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-  background-image: url("{% static 'mainsite/images/team.jpg' %}");
+  background-image: url("{% static 'mainsite/images/services.jpg' %}");
   min-height: 50%;
 }
 
@@ -48,20 +48,14 @@ body, html {
 
 /* Fourth image (Contact) */
 .bgimg-4 {
-  background-image: url("{% static 'mainsite/images/ship-background.jpg' %}");
+  background-image: url("{% static 'mainsite/images/account.jpg' %}");
   min-height: 400px;
 }
 
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
 
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1600px) {
-  .bgimg-1, .bgimg-2, .bgimg-3 {
-    background-attachment: scroll;
-    min-height: 400px;
-  }
-}
+
 
 </style>
 </head>
@@ -73,7 +67,6 @@ body, html {
   <i class="fa fa-whatsapp my-float"></i>
   </a>
 
-
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar" id="myNavbar">
@@ -81,31 +74,35 @@ body, html {
       
     </a>
     <a href="{% url 'index' %}" class="w3-bar-item w3-button"><img src = "{% static 'mainsite/images/logo-noback.png' %}" width="100  " style="opacity:0;" id="toplogo" /></a>
-    <a href="{% url 'index' %}" class="w3-bar-item w3-button" style = "padding: 1em;"><b>HOME</b></a>
-    <a href="{% url 'about' %}" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>QUIENES SOMOS</b></a>
-    <a href="#oficinas" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>OFICINAS</b></a>
+    <div id="menu" style="color:white">
+      <a href="{% url 'index' %}" class="w3-bar-item w3-button" style = "padding: 1em;"><b>HOME</b></a>
+      <a href="{% url 'about' %}" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>QUIENES SOMOS</b></a>
+      <a href="#oficinas" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>OFICINAS</b></a>
+      
+      <div class="w3-dropdown-hover w3-hide-small">
+        <a href="{% url 'services' %}" class="w3-button w3-hide-small w3-button" style = "padding: 1em;"><b>SERVICIOS</b> <i class="fa fa-caret-down"></i></a>     
+          <div class="w3-dropdown-content w3-bar-block w3-card-4">
+            <a href="#imports" class="w3-bar-item w3-button" >TRANSPORTE AÉREO</a>
+            <a href="#exports" class="w3-bar-item w3-button">TRANSPORTE TERRESTRE</a>
+            <a href="#conta" class="w3-bar-item w3-button">TRANSPORTE MARÍTIMO</a>
+            <a href="#conta" class="w3-bar-item w3-button">AGENCIAMIENTO ADUANERO</a>
+          </div>
+      </div>
+      <a href="{% url 'pqrs' %}" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>PQRS</b></a>
+      <div class="w3-dropdown-hover w3-hide-small">
+        <a href="{% url 'team' %}" class="w3-button w3-hide-small w3-button" style = "padding: 1em;"><b>DEPARTAMENTOS</b> <i class="fa fa-caret-down"></i></a>     
+          <div class="w3-dropdown-content w3-bar-block w3-card-4">
+            <a href="#imports" class="w3-bar-item w3-button" >IMPORTACIÓN</a>
+            <a href="#exports" class="w3-bar-item w3-button">EXPORTACIÓN</a>
+            <a href="#conta" class="w3-bar-item w3-button">CONTABILIDAD</a>
+          </div>
+      </div>
     
-    <div class="w3-dropdown-hover w3-hide-small">
-      <a href="{% url 'services' %}" class="w3-button w3-hide-small w3-button" style = "padding: 1em;"><b>SERVICIOS</b> <i class="fa fa-caret-down"></i></a>     
-        <div class="w3-dropdown-content w3-bar-block w3-card-4">
-          <a href="#imports" class="w3-bar-item w3-button" >TRANSPORTE AÉREO</a>
-          <a href="#exports" class="w3-bar-item w3-button">TRANSPORTE TERRESTRE</a>
-          <a href="#conta" class="w3-bar-item w3-button">TRANSPORTE MARÍTIMO</a>
-          <a href="#conta" class="w3-bar-item w3-button">AGENCIAMIENTO ADUANERO</a>
-        </div>
+    <a href="{% url 'tracking' %}" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>RASTREO DE PAQUETES</b></a>
     </div>
-    <a href="#pqr" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>PQRS</b></a>
-    <div class="w3-dropdown-hover w3-hide-small">
-      <a href="{% url 'team' %}" class="w3-button w3-hide-small w3-button" style = "padding: 1em;"><b>DEPARTAMENTOS</b> <i class="fa fa-caret-down"></i></a>     
-        <div class="w3-dropdown-content w3-bar-block w3-card-4">
-          <a href="#imports" class="w3-bar-item w3-button" >IMPORTACIÓN</a>
-          <a href="#exports" class="w3-bar-item w3-button">EXPORTACIÓN</a>
-          <a href="#conta" class="w3-bar-item w3-button">CONTABILIDAD</a>
-        </div>
-    </div>
-    <a href="#tracking" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>RASTREO DE PAQUETES</b></a>
   </div>
 </div>
+
 
 
 
@@ -263,11 +260,29 @@ body, html {
 
 
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-32 ">
-    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Subir</a>
-    
-    <p> Desarrollado por:<a href="https://www.stefanolacorazza.com" title="W3.CSS" target="_blank" class="w3-hover-text-green">Stefano Lacorazza</a></p>
-  </footer>
+<footer>
+  <div class="footer">
+  <div class="row">
+  <a href="#"><i class="fa fa-facebook"></i></a>
+  <a href="#"><i class="fa fa-instagram"></i></a>
+  <a href="#"><i class="fa fa-youtube"></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a>
+  </div>
+  
+  <div class="row">
+  <ul>
+  <li><a href="{% url 'pqrs' %}">Contactenos</a></li>
+  <li><a href="{% url 'services' %}">Servicios</a></li>
+  <li><a href="#">Política de Privacidad </a></li>
+  <li><a href="{% url 'tracking' %}">Rastreo</a></li>
+  </ul>
+  </div>
+  
+  <div class="row">
+  EUROCARGA © 2023  - Todos los derechos reservados
+  </div>
+  </div>
+</footer>
    <!-- SCRIPTS -->
     
   <script src="{% static 'mainsite/js/javs.js' %}"></script>

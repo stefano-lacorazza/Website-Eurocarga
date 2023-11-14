@@ -2,7 +2,7 @@
 <html>
 {% load static %}
 <head>
-<title>EuroCarga</title>
+<title>EuroCarga - Servicios</title>
 <link rel="icon" type="image/x-icon" href="{% static 'mainsite/images/favicon.ico' %}">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,29 +19,43 @@ body, html {
   line-height: 1.8;
 }
 
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 15px;
+}
+
 /* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
+.parall-1,.parall-2,.parall-3,.parall-4,.parall-5,.parall-6 {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-/* First image (Logo. Full height) */
-.bgimg-1 {
-
-  min-height: 100%;
+/* Parallax Images */
+.parall-1 {
+  background-image: url("{% static 'mainsite/images/services.jpg' %}");
+  min-height: 400px;
 }
-
-
-/* Second image (Portfolio) */
-.bgimg-2 {
+.parall-2 {
+  background-image: url("{% static 'mainsite/images/exports-dep.jpg' %}");
+  min-height: 400px;
+}
+.parall-3 {
+  background-image: url("{% static 'mainsite/images/ship-background.jpg' %}");
+  min-height: 400px;
+}
+.parall-4 {
   background-image: url("{% static 'mainsite/images/trucks-background.jpg' %}");
   min-height: 400px;
 }
-
-/* Third image (Contact) */
-.bgimg-3 {
+.parall-5 {
+  background-image: url("{% static 'mainsite/images/services.jpg' %}");
+  min-height: 400px;
+}
+.parall-6 {
   background-image: url("{% static 'mainsite/images/ship-background.jpg' %}");
   min-height: 400px;
 }
@@ -49,35 +63,6 @@ body, html {
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
 
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1600px) {
-  .bgimg-1, .bgimg-2, .bgimg-3 {
-    background-attachment: scroll;
-    min-height: 400px;
-  }
-}
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.desc {
-  padding: 15px;
-  text-align: center;
-}
 
 </style>
 </head>
@@ -97,32 +82,34 @@ body, html {
       
     </a>
     <a href="{% url 'index' %}" class="w3-bar-item w3-button"><img src = "{% static 'mainsite/images/logo-noback.png' %}" width="100  " style="opacity:0;" id="toplogo" /></a>
-    <a href="{% url 'index' %}" class="w3-bar-item w3-button" style = "padding: 1em;"><b>HOME</b></a>
-    <a href="{% url 'about' %}" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>QUIENES SOMOS</b></a>
-    <a href="#oficinas" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>OFICINAS</b></a>
+    <div id="menu" style="color:white">
+      <a href="{% url 'index' %}" class="w3-bar-item w3-button" style = "padding: 1em;"><b>HOME</b></a>
+      <a href="{% url 'about' %}" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>QUIENES SOMOS</b></a>
+      <a href="#oficinas" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>OFICINAS</b></a>
+      
+      <div class="w3-dropdown-hover w3-hide-small">
+        <a href="{% url 'services' %}" class="w3-button w3-hide-small w3-button" style = "padding: 1em;"><b>SERVICIOS</b> <i class="fa fa-caret-down"></i></a>     
+          <div class="w3-dropdown-content w3-bar-block w3-card-4">
+            <a href="#imports" class="w3-bar-item w3-button" >TRANSPORTE AÉREO</a>
+            <a href="#exports" class="w3-bar-item w3-button">TRANSPORTE TERRESTRE</a>
+            <a href="#conta" class="w3-bar-item w3-button">TRANSPORTE MARÍTIMO</a>
+            <a href="#conta" class="w3-bar-item w3-button">AGENCIAMIENTO ADUANERO</a>
+          </div>
+      </div>
+      <a href="{% url 'pqrs' %}" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>PQRS</b></a>
+      <div class="w3-dropdown-hover w3-hide-small">
+        <a href="{% url 'team' %}" class="w3-button w3-hide-small w3-button" style = "padding: 1em;"><b>DEPARTAMENTOS</b> <i class="fa fa-caret-down"></i></a>     
+          <div class="w3-dropdown-content w3-bar-block w3-card-4">
+            <a href="#imports" class="w3-bar-item w3-button" >IMPORTACIÓN</a>
+            <a href="#exports" class="w3-bar-item w3-button">EXPORTACIÓN</a>
+            <a href="#conta" class="w3-bar-item w3-button">CONTABILIDAD</a>
+          </div>
+      </div>
     
-    <div class="w3-dropdown-hover w3-hide-small">
-      <a href="{% url 'services' %}" class="w3-button w3-hide-small w3-button" style = "padding: 1em;"><b>SERVICIOS</b> <i class="fa fa-caret-down"></i></a>     
-        <div class="w3-dropdown-content w3-bar-block w3-card-4">
-          <a href="#imports" class="w3-bar-item w3-button" >TRANSPORTE AÉREO</a>
-          <a href="#exports" class="w3-bar-item w3-button">TRANSPORTE TERRESTRE</a>
-          <a href="#conta" class="w3-bar-item w3-button">TRANSPORTE MARÍTIMO</a>
-          <a href="#conta" class="w3-bar-item w3-button">AGENCIAMIENTO ADUANERO</a>
-        </div>
+    <a href="{% url 'tracking' %}" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>RASTREO DE PAQUETES</b></a>
     </div>
-    <a href="#pqr" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>PQRS</b></a>
-    <div class="w3-dropdown-hover w3-hide-small">
-      <a href="{% url 'team' %}" class="w3-button w3-hide-small w3-button" style = "padding: 1em;"><b>DEPARTAMENTOS</b> <i class="fa fa-caret-down"></i></a>     
-        <div class="w3-dropdown-content w3-bar-block w3-card-4">
-          <a href="#imports" class="w3-bar-item w3-button" >IMPORTACIÓN</a>
-          <a href="#exports" class="w3-bar-item w3-button">EXPORTACIÓN</a>
-          <a href="#conta" class="w3-bar-item w3-button">CONTABILIDAD</a>
-        </div>
-    </div>
-    <a href="#tracking" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>RASTREO DE PAQUETES</b></a>
   </div>
 </div>
-
 
 
   <!-- Navbar on small screens -->
@@ -140,21 +127,225 @@ body, html {
 <main>
 
 
+<!-- First Parallax Image with Logo Text -->
+<div class="parall-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle">
+      <span class="w3-xxlarge w3-text-white w3-wide">Servicios</span>
+      <span class="w3-xlarge w3-text-white w3-wide"><br>LLEVAMOS TODO EL MUNDO A SU PUERTA, SU NEGOCIO NO SE DETIENE Y NOSOTROS TAMPOCO.</span>
+    </div>
+</div>
 
 
+<div class="header w3-row-padding w3-white w3-padding-64 w3-container">
+  <div class="w3-content">
+      <div class="w3-center">
+          <h5 class="w3-padding-32">Garantizamos excelentes servicios y tarifas para el
+            transporte en la movilización de su mercancía, destinada
+            a salvaguardar su carga internacional</h5>
+      </div>
+  </div>
+</div>
 
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="parall-2 w3-display-container w3-opacity-min" id="transaereo">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">TRANSPORTE AÉREO</span>
+  </div>
+</div>
 
+<div class="w3-content w3-container w3-padding-64" >
+  
 
-
-
+  <p>Rapidez y agilidad para la entrega de cargas, trabajamos desde la experiencia y le damos valor
+    agregado desde el conocimiento en documentos y procedimientos.
+    Con EUROCARGA sus mercancías viajarán en 1° clase, desde su recolección hasta su entrega,
+    sin importar el tamaño, tipo o valor de la carga, siempre se evaluará y se recomendarán las
+    mejores opciones para que vuele seguro.
+  </p>
 
     
+  <div class="row">
+    <div class="column">
+      <div class="w3-container">
+        <h5 class=""><b>RELACIONES</b></h5>
+        <p>Conexiones con las aerolíneas y su cadena
+          profesional</p>
+        <hr>
+      </div>
+
+      <div class="w3-container">
+        <h5 class=""><b>ASISTENCIA</b></h5>
+        <p>Servicios de embalaje y de documentación.</p>
+        <hr>
+      </div>
+
+      <div class="w3-container">
+        <h5 class=""><b>COMUNICACIÓN</b></h5>
+        <p>Información de su carga en tiempo real </p><br>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="w3-container">
+        <h5 class=""><b>CERTIFICADOS</b></h5>
+        <p>Altamente calificados y certificados ante la
+          IATA</p>
+        <hr>
+      </div>
+
+      <div class="w3-container">
+        <h5 class=""><b>OPERACIONES</b></h5>
+        <p>Servicio puerta a puerta</p>
+        <hr>
+      </div>
+
+      <div class="w3-container">
+        <h5 class=""><b>TRÁMITES</b></h5>
+        <p>Procesos de aduanas en origen y destino</p>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="w3-content" >
+  <p></p>
+</div>
+
+<!-- Third Parallax Image with Portfolio Text -->
+<div class="parall-3 w3-display-container w3-opacity-min" id="conta">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">TRANSPORTE MARÍTIMO</span>
+  </div>
+</div>
+
+
+<div class="w3-content w3-container w3-padding-64" >
+  
+
+  <p>A nivel internacional, gracias a su red de cobertura entre aliados estratégicos, nuestras
+  excelentes relaciones con las navieras nos permiten ofrecer a nuestros clientes respaldo y
+  cumplimiento; además en EUROCARGA hay un gran equipo humano, dotado de experiencia
+  en procesos marítimos que de acuerdo a las necesidades tanto en importación como en
+  exportación y triangulaciones aportarán las soluciones más confiables</p>
+
+
+  <div class="row">
+    <div class="column">
+
+      <div class="w3-container">
+        <p>FCL/LCL</p>
+      </div>
+
+      <div class="w3-container">
+        <p> Carga pesada/sobredimensionada</p>
+      </div>
+
+      <div class="w3-container">
+        <p>Carga perecedera /refrigerada</p>
+      </div>
+
+      <div class="w3-container">
+        <p>Cobertura internacional</p>
+      </div>
+
+    </div>
+
+    <div class="column">
+      <div class="w3-container">
+        <p> Carga RO/RO Carga rodante</p>
+      </div>
+
+      <div class="w3-container">
+        <p>Proyectos especiales</p>
+      </div>
+
+      <div class="w3-container">
+        <p>Transporte OTM</p>
+      </div>
+      <div class="w3-container">
+        <p>Bodegas de almacenamiento</p>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="w3-content" >
+<p></p>
+</div>
+
+
+    <!-- Fourth Parallax Image with Portfolio Text -->
+<div class="parall-4 w3-display-container w3-opacity-min" id="conta">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">TRANSPORTE TERRESTRE</span>
+  </div>
+</div>
+
+<div class="w3-content w3-container w3-padding-64" >
+  
+
+  <p>El terrestre se ha convertido en la solución a cualquier necesidad de
+    conexión local, regional y nacional más utilizada</p>
+
+    <p>Contamos con excelentes proveedores desde su lugar de origen para la recolección,
+    hasta entrega final.</p>
+
+
+</div>     
+
+
+
+<!-- Fifth Parallax Image with Portfolio Text -->
+<div class="parall-5 w3-display-container w3-opacity-min" id="conta">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">AGENCIAMIENTO
+      ADUANERO</span>
+  </div>
+</div>
+
+<div class="w3-content w3-container w3-padding-64" >
+  
+
+  <p>Ofrecemos el servicio de aduana como
+    paquete completo a las operaciones,
+    somos totalmente fiables comprometidos
+    con el agenciamiento aduanero en toda su
+    documentación, frente a las autoridades
+    aduaneras en Colombia y en el exterior
+    gracias a nuestra amplia red de aliados
+    internacionales.</p>
+    
+</div> 
+
+
+
+
+
 
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-32 ">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Subir</a>
+<footer>
+  <div class="footer">
+  <div class="row">
+  <a href="#"><i class="fa fa-facebook"></i></a>
+  <a href="#"><i class="fa fa-instagram"></i></a>
+  <a href="#"><i class="fa fa-youtube"></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a>
+  </div>
   
-  <p> Desarrollado por:<a href="https://www.stefanolacorazza.com" title="W3.CSS" target="_blank" class="w3-hover-text-green">Stefano Lacorazza</a></p>
+  <div class="row">
+  <ul>
+  <li><a href="{% url 'pqrs' %}">Contactenos</a></li>
+  <li><a href="{% url 'services' %}">Servicios</a></li>
+  <li><a href="#">Política de Privacidad </a></li>
+  <li><a href="{% url 'tracking' %}">Rastreo</a></li>
+  </ul>
+  </div>
+  
+  <div class="row">
+  EUROCARGA © 2023  - Todos los derechos reservados
+  </div>
+  </div>
 </footer>
  <!-- SCRIPTS -->
   
