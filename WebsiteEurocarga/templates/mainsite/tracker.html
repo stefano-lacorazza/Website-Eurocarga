@@ -63,39 +63,38 @@ body, html {
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
-    <div class="w3-bar" id="myNavbar">
-      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu" id="myNavbar"></a>
-        
-      </a>
-      <a href="{% url 'index' %}" class="w3-bar-item w3-button"><img src = "{% static 'mainsite/images/logo-noback.png' %}" width="100  " style="opacity:0;" id="toplogo" /></a>
-      <div id="menu" style="color:white">
-        <a href="{% url 'index' %}" class="w3-bar-item w3-button" style = "padding: 1em;"><b>HOME</b></a>
-        <a href="{% url 'about' %}" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>QUIENES SOMOS</b></a>
-        <a href="#oficinas" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>OFICINAS</b></a>
-        
-        <div class="w3-dropdown-hover w3-hide-small">
-          <a href="{% url 'services' %}" class="w3-button w3-hide-small w3-button" style = "padding: 1em;"><b>SERVICIOS</b> <i class="fa fa-caret-down"></i></a>     
-            <div class="w3-dropdown-content w3-bar-block w3-card-4">
-              <a href="#imports" class="w3-bar-item w3-button" >TRANSPORTE AÉREO</a>
-              <a href="#exports" class="w3-bar-item w3-button">TRANSPORTE TERRESTRE</a>
-              <a href="#conta" class="w3-bar-item w3-button">TRANSPORTE MARÍTIMO</a>
-              <a href="#conta" class="w3-bar-item w3-button">AGENCIAMIENTO ADUANERO</a>
-            </div>
-        </div>
-        <a href="{% url 'pqrs' %}" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>PQRS</b></a>
-        <div class="w3-dropdown-hover w3-hide-small">
-          <a href="{% url 'team' %}" class="w3-button w3-hide-small w3-button" style = "padding: 1em;"><b>DEPARTAMENTOS</b> <i class="fa fa-caret-down"></i></a>     
-            <div class="w3-dropdown-content w3-bar-block w3-card-4">
-              <a href="#imports" class="w3-bar-item w3-button" >IMPORTACIÓN</a>
-              <a href="#exports" class="w3-bar-item w3-button">EXPORTACIÓN</a>
-              <a href="#conta" class="w3-bar-item w3-button">CONTABILIDAD</a>
-            </div>
-        </div>
+  <div class="w3-bar" id="myNavbar" style="text-align: center;">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu" id="myNavbar" style="text-align: center;"></a>
       
-      <a href="{% url 'tracking' %}" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>RASTREO DE PAQUETES</b></a>
+    <a href="#" class="w3-bar-item w3-button"><img src = "{% static 'mainsite/images/logo-noback.png' %}" width="100  " style="opacity:0;" id="toplogo" /></a>
+    <div id="menu" style="color:white">
+      <a href="" class="w3-bar-item " style = "padding-right: 9em"> </a>
+      <a href="{% url 'index' %}" class="w3-bar-item w3-button underline-on-hover" style = "padding: 1em;"><b>HOME</b></a>
+      <a href="{% url 'about' %}" class="w3-bar-item w3-button w3-hide-small underline-on-hover" style = "padding: 1em;"> <b>QUIENES SOMOS</b></a>
+      <a href="#oficinas" class="w3-bar-item w3-button w3-hide-small underline-on-hover" style = "padding: 1em;"> <b>OFICINAS</b></a>
+      
+      <div class="w3-dropdown-hover w3-hide-small">
+        <a href="{% url 'services' %}" class="w3-button w3-hide-small w3-button underline-on-hover" style = "padding: 1em;"><b>SERVICIOS</b> <i class="fa fa-caret-down"></i></a>     
+          <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-round-large">
+            <a href="#imports" class="w3-bar-item w3-button w3-round-large underline-on-hover" >TRANSPORTE AÉREO</a>
+            <a href="#exports" class="w3-bar-item w3-button underline-on-hover">TRANSPORTE TERRESTRE</a>
+            <a href="#conta" class="w3-bar-item w3-button underline-on-hover">TRANSPORTE MARÍTIMO</a>
+            <a href="#conta" class="w3-bar-item w3-button w3-round-large underline-on-hover">AGENCIAMIENTO ADUANERO</a>
+          </div>
+      </div>
+      <a href="{% url 'pqrs' %}" class="w3-bar-item w3-button w3-hide-small underline-on-hover" style = "padding: 1em;"> <b>PQRS</b></a>
+      
+      <div class="w3-dropdown-hover w3-hide-small">
+        <a href="{% url 'team' %}" class="w3-button w3-hide-small w3-button underline-on-hover" style = "padding: 1em;"><b>DEPARTAMENTOS</b> <i class="fa fa-caret-down"></i></a>     
+          <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-round-large">
+            <a href="#imports" class="w3-bar-item w3-button w3-round-large underline-on-hover" >IMPORTACIÓN</a>
+            <a href="#exports" class="w3-bar-item w3-button underline-on-hover">EXPORTACIÓN</a>
+            <a href="#conta" class="w3-bar-item w3-button w3-round-large underline-on-hover">CONTABILIDAD</a>
+          </div>
       </div>
     </div>
   </div>
+</div>
   
 
 

@@ -27,10 +27,10 @@ body, html {
   background-size: cover;
 }
 
-/* First image (Logo. Full height) */
+/* First image  */
 .bgimg-1 {
   background-image: url("{% static 'mainsite/images/team.jpg' %}");
-  min-height: 100%;
+  min-height: 50%;
 }
 
 
@@ -74,36 +74,35 @@ body, html {
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu" id="myNavbar"></a>
+  <div class="w3-bar" id="myNavbar" style="text-align: center;">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu" id="myNavbar" style="text-align: center;"></a>
       
-    </a>
-    <a href="{% url 'index' %}" class="w3-bar-item w3-button"><img src = "{% static 'mainsite/images/logo-noback.png' %}" width="100  " style="opacity:0;" id="toplogo" /></a>
+    <a href="#" class="w3-bar-item w3-button"><img src = "{% static 'mainsite/images/logo-noback.png' %}" width="100  " style="opacity:0;" id="toplogo" /></a>
     <div id="menu" style="color:white">
-      <a href="{% url 'index' %}" class="w3-bar-item w3-button" style = "padding: 1em;"><b>HOME</b></a>
-      <a href="{% url 'about' %}" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>QUIENES SOMOS</b></a>
-      <a href="#oficinas" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>OFICINAS</b></a>
+      <a href="" class="w3-bar-item " style = "padding-right: 9em"> </a>
+      <a href="{% url 'index' %}" class="w3-bar-item w3-button underline-on-hover" style = "padding: 1em;"><b>HOME</b></a>
+      <a href="{% url 'about' %}" class="w3-bar-item w3-button w3-hide-small underline-on-hover" style = "padding: 1em;"> <b>QUIENES SOMOS</b></a>
+      <a href="#oficinas" class="w3-bar-item w3-button w3-hide-small underline-on-hover" style = "padding: 1em;"> <b>OFICINAS</b></a>
       
       <div class="w3-dropdown-hover w3-hide-small">
-        <a href="{% url 'services' %}" class="w3-button w3-hide-small w3-button" style = "padding: 1em;"><b>SERVICIOS</b> <i class="fa fa-caret-down"></i></a>     
-          <div class="w3-dropdown-content w3-bar-block w3-card-4">
-            <a href="#imports" class="w3-bar-item w3-button" >TRANSPORTE AÉREO</a>
-            <a href="#exports" class="w3-bar-item w3-button">TRANSPORTE TERRESTRE</a>
-            <a href="#conta" class="w3-bar-item w3-button">TRANSPORTE MARÍTIMO</a>
-            <a href="#conta" class="w3-bar-item w3-button">AGENCIAMIENTO ADUANERO</a>
+        <a href="{% url 'services' %}" class="w3-button w3-hide-small w3-button underline-on-hover" style = "padding: 1em;"><b>SERVICIOS</b> <i class="fa fa-caret-down"></i></a>     
+          <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-round-large">
+            <a href="#imports" class="w3-bar-item w3-button w3-round-large underline-on-hover" >TRANSPORTE AÉREO</a>
+            <a href="#exports" class="w3-bar-item w3-button underline-on-hover">TRANSPORTE TERRESTRE</a>
+            <a href="#conta" class="w3-bar-item w3-button underline-on-hover">TRANSPORTE MARÍTIMO</a>
+            <a href="#conta" class="w3-bar-item w3-button w3-round-large underline-on-hover">AGENCIAMIENTO ADUANERO</a>
           </div>
       </div>
-      <a href="{% url 'pqrs' %}" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>PQRS</b></a>
+      <a href="{% url 'pqrs' %}" class="w3-bar-item w3-button w3-hide-small underline-on-hover" style = "padding: 1em;"> <b>PQRS</b></a>
+      
       <div class="w3-dropdown-hover w3-hide-small">
-        <a href="{% url 'team' %}" class="w3-button w3-hide-small w3-button" style = "padding: 1em;"><b>DEPARTAMENTOS</b> <i class="fa fa-caret-down"></i></a>     
-          <div class="w3-dropdown-content w3-bar-block w3-card-4">
-            <a href="#imports" class="w3-bar-item w3-button" >IMPORTACIÓN</a>
-            <a href="#exports" class="w3-bar-item w3-button">EXPORTACIÓN</a>
-            <a href="#conta" class="w3-bar-item w3-button">CONTABILIDAD</a>
+        <a href="{% url 'team' %}" class="w3-button w3-hide-small w3-button underline-on-hover" style = "padding: 1em;"><b>DEPARTAMENTOS</b> <i class="fa fa-caret-down"></i></a>     
+          <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-round-large">
+            <a href="#imports" class="w3-bar-item w3-button w3-round-large underline-on-hover" >IMPORTACIÓN</a>
+            <a href="#exports" class="w3-bar-item w3-button underline-on-hover">EXPORTACIÓN</a>
+            <a href="#conta" class="w3-bar-item w3-button w3-round-large underline-on-hover">CONTABILIDAD</a>
           </div>
       </div>
-    
-    <a href="{% url 'tracking' %}" class="w3-bar-item w3-button w3-hide-small" style = "padding: 1em;"> <b>RASTREO DE PAQUETES</b></a>
     </div>
   </div>
 </div>
@@ -120,7 +119,7 @@ body, html {
 </div>
 
 
-  <!-- First Parallax Image with Logo Text -->
+  <!-- First Parallax Image-->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
     <div class="w3-display-middle">
         <span class="w3-xxlarge w3-text-white w3-wide">QUIENES SOMOS</span>
@@ -138,9 +137,15 @@ body, html {
     <div class="w3-center">
         <h1>
             EUROCARGA</h1>
-        <h5 class="w3-padding-32">Somos una agencia de carga internacional especializada en simplificar y optimizar las operaciones de logística para exportaciones e importaciones a nivel global. Nuestra misión es brindar soluciones personalizadas y eficientes que cubran todas sus necesidades logísticas. Con años de experiencia en la industria, nuestro equipo altamente capacitado y una red global de socios estratégicos, nos enorgullece ofrecer servicios de envío confiables, seguros y rentables. Ya sea que necesite transportar sus productos a mercados internacionales o importar mercancías de todo el mundo, en EUROCARGA estamos listos para superar sus expectativas y garantizar la entrega puntual de sus mercancías a cualquier destino. Permítanos ser su socio de confianza en el mundo de la logística internacional</h5>
+        <h5 class="w3-padding-32">¡Bienvenido a EUROCARGA! Somos tu agencia de carga internacional, especializados en simplificar
+           y optimizar operaciones logísticas a nivel global. Con años de experiencia, ofrecemos soluciones eficientes y seguras 
+           para tus exportaciones e importaciones. Sé parte de nuestros clientes satisfechos que confían en nuestra experiencia y 
+           red global. ¡Haz que tu logística sea imparable con EUROCARGA!</h5>
   
-            <h5 class="w3-padding-32">Con una sólida trayectoria que se extiende desde 1983, EUROCARGA se ha consolidado como un pilar confiable en la industria de la logística en Bogotá, Colombia. Durante décadas, hemos brindado servicios de exportación e importación de primer nivel a clientes de todo el mundo, estableciendo relaciones sólidas y duraderas. Nuestra presencia a largo plazo en Bogotá es un testimonio de nuestro compromiso con la excelencia, la integridad y la satisfacción del cliente. En EUROCARGA, nos enorgullecemos de nuestra herencia y experiencia, y continuamos liderando el camino en la logística internacional con un enfoque constante en la calidad y la confiabilidad</h5>
+            <h5 class="w3-padding-32">Desde 1983, EUROCARGA ha sido un pilar confiable en la logística de Bogotá, Colombia.
+               Con décadas de experiencia, nos destacamos en exportación e importación, construyendo relaciones sólidas en 
+               todo el mundo. Nuestra presencia a largo plazo refleja nuestro compromiso con la excelencia y la satisfacción 
+               del cliente. En EUROCARGA, lideramos la logística internacional con calidad y confiabilidad.</h5>
     </div>
   
       
@@ -153,7 +158,11 @@ body, html {
       <div class="w3-twothird">
         <h1>NUESTRA
             MISIÓN</h1>
-        <h5 class="w3-padding-32">Sostener un servicio íntegro y superior de agenciamiento en transporte de carga internacional, administrar los procesos logísticos con responsabilidad y seguridad, orientados a la satisfacción de nuestros clientes y al éxito de sus negocios, con una alta calidad en los procesos, enfocados hacia la eficiencia, productividad y rentabilidad tanto de importaciones, exportaciones y aliados clientes como de nuestra compañía, de acuerdo a tiempos pactados.</h5>
+        <h5 class="w3-padding-32">Sostener un servicio íntegro y superior de agenciamiento en transporte de carga internacional,
+           administrar los procesos logísticos con responsabilidad y seguridad, orientados a la satisfacción de nuestros clientes
+            y al éxito de sus negocios, con una alta calidad en los procesos, enfocados hacia la eficiencia, productividad y 
+            rentabilidad tanto de importaciones, exportaciones y aliados clientes como de nuestra compañía, de acuerdo a tiempos
+             pactados.</h5>
   
       </div>
   
@@ -181,20 +190,6 @@ body, html {
     
   
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
