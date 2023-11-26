@@ -62,7 +62,7 @@ body, html {
 
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
-
+:root { scroll-behavior: smooth; }
 
 </style>
 </head>
@@ -85,15 +85,15 @@ body, html {
       <a href="" class="w3-bar-item " style = "padding-right: 9em"> </a>
       <a href="{% url 'index' %}" class="w3-bar-item w3-button underline-on-hover" style = "padding: 1em;"><b>HOME</b></a>
       <a href="{% url 'about' %}" class="w3-bar-item w3-button w3-hide-small underline-on-hover" style = "padding: 1em;"> <b>QUIENES SOMOS</b></a>
-      <a href="#oficinas" class="w3-bar-item w3-button w3-hide-small underline-on-hover" style = "padding: 1em;"> <b>OFICINAS</b></a>
+      <a href="{% url 'offices' %}" class="w3-bar-item w3-button w3-hide-small underline-on-hover" style = "padding: 1em;"> <b>OFICINAS</b></a>
       
       <div class="w3-dropdown-hover w3-hide-small">
         <a href="{% url 'services' %}" class="w3-button w3-hide-small w3-button underline-on-hover" style = "padding: 1em;"><b>SERVICIOS</b> <i class="fa fa-caret-down"></i></a>     
           <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-round-large">
-            <a href="#imports" class="w3-bar-item w3-button w3-round-large underline-on-hover" >TRANSPORTE AÉREO</a>
-            <a href="#exports" class="w3-bar-item w3-button underline-on-hover">TRANSPORTE TERRESTRE</a>
-            <a href="#conta" class="w3-bar-item w3-button underline-on-hover">TRANSPORTE MARÍTIMO</a>
-            <a href="#conta" class="w3-bar-item w3-button w3-round-large underline-on-hover">AGENCIAMIENTO ADUANERO</a>
+            <a href="transaereo" class="w3-bar-item w3-button w3-round-large underline-on-hover" >TRANSPORTE AÉREO</a>
+            <a href="#transterrestre" class="w3-bar-item w3-button underline-on-hover">TRANSPORTE TERRESTRE</a>
+            <a href="#transmari" class="w3-bar-item w3-button underline-on-hover">TRANSPORTE MARÍTIMO</a>
+            <a href="#otros" class="w3-bar-item w3-button w3-round-large underline-on-hover">OTROS SERVICIOS</a>
           </div>
       </div>
       <a href="{% url 'pqrs' %}" class="w3-bar-item w3-button w3-hide-small underline-on-hover" style = "padding: 1em;"> <b>PQRS</b></a>
@@ -101,9 +101,9 @@ body, html {
       <div class="w3-dropdown-hover w3-hide-small">
         <a href="{% url 'team' %}" class="w3-button w3-hide-small w3-button underline-on-hover" style = "padding: 1em;"><b>DEPARTAMENTOS</b> <i class="fa fa-caret-down"></i></a>     
           <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-round-large">
-            <a href="#imports" class="w3-bar-item w3-button w3-round-large underline-on-hover" >IMPORTACIÓN</a>
-            <a href="#exports" class="w3-bar-item w3-button underline-on-hover">EXPORTACIÓN</a>
-            <a href="#conta" class="w3-bar-item w3-button w3-round-large underline-on-hover">CONTABILIDAD</a>
+            <a href="{% url 'team' %}" class="w3-bar-item w3-button w3-round-large underline-on-hover" >IMPORTACIÓN</a>
+            <a href="{% url 'team' %}" class="w3-bar-item w3-button underline-on-hover">EXPORTACIÓN</a>
+            <a href="{% url 'team' %}" class="w3-bar-item w3-button w3-round-large underline-on-hover">CONTABILIDAD</a>
           </div>
       </div>
     </div>
@@ -211,7 +211,7 @@ body, html {
 </div>
 
 <!-- Third Parallax Image with Portfolio Text -->
-<div class="parall-3 w3-display-container w3-opacity-min" id="conta">
+<div class="parall-3 w3-display-container w3-opacity-min" id="transmari">
   <div class="w3-display-middle">
      <span class="w3-xxlarge w3-text-white w3-wide">TRANSPORTE MARÍTIMO</span>
   </div>
@@ -271,7 +271,7 @@ body, html {
 
 
     <!-- Fourth Parallax Image with Portfolio Text -->
-<div class="parall-4 w3-display-container w3-opacity-min" id="conta">
+<div class="parall-4 w3-display-container w3-opacity-min" id="transterrestre">
   <div class="w3-display-middle">
      <span class="w3-xxlarge w3-text-white w3-wide">TRANSPORTE TERRESTRE</span>
   </div>
@@ -292,7 +292,7 @@ body, html {
 
 
 <!-- Fifth Parallax Image with Portfolio Text -->
-<div class="parall-5 w3-display-container w3-opacity-min" id="conta">
+<div class="parall-5 w3-display-container w3-opacity-min" id="otros">
   <div class="w3-display-middle">
      <span class="w3-xxlarge w3-text-white w3-wide">OTROS SERVICIOS</span>
   </div>

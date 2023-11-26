@@ -15,6 +15,7 @@ urlpatterns = [
     path("services/", views.services, name="services"),
     path("pqrs/", views.pqrs, name="pqrs"),
     path("tracking/", views.tracking, name="tracking"),
+    path("offices/", views.offices, name="offices"),
     path("admin/", admin.site.urls),
 ]
 if settings.DEBUG:

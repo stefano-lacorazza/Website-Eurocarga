@@ -40,6 +40,14 @@ def pqrs(request):
     }
     return render(request, 'mainsite/pqr.html', context)
 
+def offices(request):
+
+    
+    context = {
+        "key": 0,
+    }
+    return render(request, 'mainsite/offices.html', context)
+
 def tracking(request):
 
     
