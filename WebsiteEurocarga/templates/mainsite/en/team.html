@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+<title>EuroCarga - Departamentos</title>
+<link rel="icon" type="image/x-icon" href="{% static 'mainsite/images/favicon.ico' %}">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="{% static 'mainsite/css/styles.css' %}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #777;
+  line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image  */
+.bgimg-1 {
+  background-image: url("{% static 'mainsite/images/services.jpg' %}");
+  min-height: 50%;
+}
+
+
+/* Second image  */
+.bgimg-2 {
+  background-image: url("{% static 'mainsite/images/imports-dep.jpg' %}");
+  min-height: 400px;
+}
+
+/* Third image */
+.bgimg-3 {
+  background-image: url("{% static 'mainsite/images/exports-dep.jpg' %}");
+  min-height: 400px;
+}
+
+/* Fourth image  */
+.bgimg-4 {
+  background-image: url("{% static 'mainsite/images/account.jpg' %}");
+  min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+:root { scroll-behavior: smooth; }
+
+
+</style>
+</head>
+<body style="background-color:#FFFFFF">
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <a href="https://api.whatsapp.com/send?phone=573227381279&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n." class="float" target="_blank">
+  <i class="fa fa-whatsapp my-float"></i>
+  </a>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar" style="text-align: center;">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu" id="myNavbar" style="text-align: center;"></a>
+      
+    <a href="#" class="w3-bar-item w3-button"><img src = "{% static 'mainsite/images/logo-noback.png' %}" width="100  " style="opacity:0;" id="toplogo" /></a>
+    <div id="menu" style="color:white">
+      <a href="" class="w3-bar-item " style = "padding-right: 9em"> </a>
+      <a href="{% url 'index_en' %}" class="w3-bar-item w3-button underline-on-hover" style = "padding: 1em;"><b>HOME</b></a>
+      <a href="{% url 'about_en' %}" class="w3-bar-item w3-button w3-hide-small underline-on-hover" style = "padding: 1em;"> <b>ABOUT US</b></a>
+      <a href="{% url 'offices_en' %}" class="w3-bar-item w3-button w3-hide-small underline-on-hover" style = "padding: 1em;"> <b>OFFICES</b></a>
+      
+      <div class="w3-dropdown-hover w3-hide-small">
+        <a href="{% url 'services_en' %}" class="w3-button w3-hide-small w3-button underline-on-hover" style = "padding: 1em;"><b>SERVICES</b> <i class="fa fa-caret-down"></i></a>     
+          <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-round-large">
+            <a href="{% url 'services_en' %}" class="w3-bar-item w3-button w3-round-large underline-on-hover" >AIR TRANSPORT</a>
+            <a href="{% url 'services_en' %}" class="w3-bar-item w3-button underline-on-hover">LAND TRANSPORT</a>
+            <a href="{% url 'services_en' %}" class="w3-bar-item w3-button underline-on-hover">SEA TRANSPORT</a>
+            <a href="{% url 'services_en' %}" class="w3-bar-item w3-button w3-round-large underline-on-hover">OTHER SERVICES</a>
+          </div>
+      </div>
+      <a href="{% url 'pqrs' %}" class="w3-bar-item w3-button w3-hide-small underline-on-hover" style = "padding: 1em;"> <b>PQRS</b></a>
+      
+      <div class="w3-dropdown-hover w3-hide-small">
+        <a href="{% url 'team_en' %}" class="w3-button w3-hide-small w3-button underline-on-hover" style = "padding: 1em;"><b>DEPARTMENTS</b> <i class="fa fa-caret-down"></i></a>     
+          <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-round-large">
+            <a href="#imports" class="w3-bar-item w3-button w3-round-large underline-on-hover" >IMPORTS</a>
+            <a href="#exports" class="w3-bar-item w3-button underline-on-hover">EXPORTS</a>
+            <a href="#conta" class="w3-bar-item w3-button w3-round-large underline-on-hover">ACCOUNTING</a>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">QUIENES SOMOS</a>
+    <a href="#oficinas" class="w3-bar-item w3-button" onclick="toggleFunction()">OFICINAS</a>
+    <a href="#pqr" class="w3-bar-item w3-button" onclick="toggleFunction()">PQRS</a>
+    <a href="{% url 'team' %}" class="w3-bar-item w3-button" onclick="toggleFunction()">NUESTRO EQUIPO</a>
+    <a href="#tracking" class="w3-bar-item w3-button" onclick="toggleFunction()">RASTREO DE PAQUETES</a>
+    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+    <div class="w3-display-middle">
+        <span class="w3-xxlarge w3-text-white w3-wide">Departments</span>
+      </div>
+</div>
+
+
+
+<div class="header w3-row-padding w3-white w3-padding-64 w3-container">
+    <div class="w3-content">
+        <div class="w3-center">
+            <h5 class="w3-padding-32">At EUROCARGA, we consider our team as the heart of our organization. Our dedicated professionals are divided into 
+              three key departments that work in harmony to provide you with a comprehensive and efficient service in the world of international logistics.</h5>
+        </div>
+    </div>
+</div>
+
+
+    
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min" id="imports">
+    <div class="w3-display-middle">
+      <span class="w3-xxlarge w3-text-white w3-wide">IMPORTS</span>
+    </div>
+</div>
+
+<div class="w3-content w3-container w3-padding-64" >
+    
+  
+    <p>
+      At EUROCARGA, our Import Department is the core of our commitment to efficiency and accuracy. Our team of highly trained professionals 
+      specializes in coordinating import operations, ensuring that your products reach Colombia safely and on time. Their expertise and knowledge 
+      in customs regulations and international logistics are invaluable resources for our clients. To get in touch with our Import team, 
+      find their contact information below.</p>
+      
+    <ul class="w3-ul ">
+        <li class="w3-bar">
+          <img src="{% static 'mainsite/images/avatar.png' %}" class="w3-bar-item w3-circle w3-hide-small" style="width:150px">
+          <div class="w3-bar-item">
+            <span><p><b>Cristhiam Beltrán</b> </p>
+                <p>Sales Manager</p>
+                <p><a href="mailto:gerencia@eurocarga.com">gerencia@eurocarga.com</a></p>
+                <p>310 424 9299</p>
+              </span>
+              
+          </div>
+        </li>
+        <li class="w3-bar">
+            <img src="{% static 'mainsite/images/avatar2.png' %}" class="w3-bar-item w3-circle w3-hide-small" style="width:150px">
+            <div class="w3-bar-item">
+              <span><p><b>Karina Bayona</b> </p>
+                <p>Customer Service Import & Export </p>
+                  <p><a href="mailto:operacionesbog@eurocarga.com">operacionesbog@eurocarga.com</a></p>
+                  <p>320 498 4604</p>
+                </span>
+            </div>
+        </li>
+     </ul>
+</div>
+
+<!-- Third Parallax Image with Portfolio Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min" id="exports">
+    <div class="w3-display-middle">
+       <span class="w3-xxlarge w3-text-white w3-wide"> EXPORTS</span>
+    </div>
+  </div>
+
+  <div class="w3-content w3-container w3-padding-64" >
+    
+  
+    <p>
+      In the Export Department of EUROCARGA, we are dedicated to taking your products to new global markets. Our team of experts handles all aspects of the export 
+      process, from cargo preparation to document management and coordination of international shipments. Their commitment to efficiency and customer satisfaction 
+      is evident at every step of the process. If you would like more information or need assistance with exports, feel free to contact our team.</p>
+      
+    <ul class="w3-ul ">
+        <li class="w3-bar">
+          <img src="{% static 'mainsite/images/avatar.png' %}" class="w3-bar-item w3-circle w3-hide-small" style="width:150px">
+          <div class="w3-bar-item">
+            <span><p><b>John Martínez</b> </p>
+                <p>
+                  Export Manager</p>
+                <p><a href="mailto:exportaciones@eurocarga.com">exportaciones@eurocarga.com</a></p>
+                <p>316 521 9867</p>
+              </span>
+              
+          </div>
+        </li>
+        <li class="w3-bar">
+            <img src="{% static 'mainsite/images/avatar2.png' %}" class="w3-bar-item w3-circle w3-hide-small" style="width:150px">
+            <div class="w3-bar-item">
+              <span><p><b>Sofia Mogollón</b> </p>
+                <p>
+                  Operations Assistant</p>
+                  <p><a href="mailto:comercial1@eurocarga.com@eurocarga.com">comercial1@eurocarga.com@eurocarga.com</a></p>
+                  <p>322 738 1279</p>
+                </span>
+            </div>
+        </li>
+     </ul>
+</div>
+
+<!-- Fourth Parallax Image with Portfolio Text -->
+<div class="bgimg-4 w3-display-container w3-opacity-min" id="conta">
+    <div class="w3-display-middle">
+       <span class="w3-xxlarge w3-text-white w3-wide">
+        ACCOUNTING
+        </span>
+    </div>
+  </div>
+
+  <div class="w3-content w3-container w3-padding-64" >
+    
+  
+    <p>At EUROCARGA, we rely on our expert accountant to maintain financial integrity in all our transactions. Her experience and knowledge in accounting and
+       finance are essential for keeping accurate records. Reliability and integrity are our core principles, and our accountant is the person behind them.
+        Allow us to introduce you to our dedicated professional in the Accounting Department.</p>
+      
+    <ul class="w3-ul ">
+        <li class="w3-bar">
+          <img src="{% static 'mainsite/images/avatar2.png' %}" class="w3-bar-item w3-circle w3-hide-small" style="width:150px">
+          <div class="w3-bar-item">
+            <span><p><b>Nidia Archila</b> </p>
+                <p>
+                  Accountant</p>
+                <p><a href="mailto:contabilidad@eurocarga.com">contabilidad@eurocarga.com</a></p>
+                <p>317 886 5047</p>
+              </span>
+              
+          </div>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+<!-- Footer -->
+
+<footer>
+  <div class="footer">
+  <div class="row">
+  <a href="#"><i class="fa fa-facebook"></i></a>
+  <a href="#"><i class="fa fa-instagram"></i></a>
+  <a href="#"><i class="fa fa-youtube"></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a>
+  </div>
+  
+  <div class="row">
+  <ul>
+  <li><a href="{% url 'pqrs' %}">Contact</a></li>
+  <li><a href="{% url 'services' %}">Services</a></li>
+  <li><a href="#">Privacy Policy</a></li>
+  </ul>
+  </div>
+  
+  <div class="row">
+  EUROCARGA © 2023  - All rights reserved
+  </div>
+  </div>
+</footer>
+   <!-- SCRIPTS -->
+    
+  <script src="{% static 'mainsite/js/javs.js' %}"></script>
+  
+
+  </body>
+  </html>
+
