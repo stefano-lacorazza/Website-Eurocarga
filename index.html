@@ -65,35 +65,32 @@ body, html {
   <div class="w3-bar" id="myNavbar" style="text-align: center;">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu" id="myNavbar" style="text-align: center;"></a>
       
-    <a href="#" class="w3-bar-item w3-button"><img src = "{% static 'mainsite/images/logo-noback.png' %}" width="100  " style="opacity:0;" id="toplogo" /></a>
+    <a href="#" class="w3-bar-item w3-button"><img src = "static/images/logo-noback.png" width="100  " style="opacity:0;" id="toplogo" /></a>
     <div id="menu" style="color:white">
-      <a href="" class="w3-bar-item " style = "padding-right: 9em"> </a>
-      <a href="{% url 'index' %}" class="w3-bar-item w3-button underline-on-hover" style = "padding: 1em;"><b>HOME</b></a>
-      <a href="{% url 'about' %}" class="w3-bar-item w3-button w3-hide-small underline-on-hover" style = "padding: 1em;"> <b>QUIENES SOMOS</b></a>
-      <a href="{% url 'offices' %}" class="w3-bar-item w3-button w3-hide-small underline-on-hover" style = "padding: 1em;"> <b>OFICINAS</b></a>
+      <a href="" class="w3-bar-item " style="padding-right: 9em"> </a>
+      <a href="index.html" class="w3-bar-item w3-button underline-on-hover" style="padding: 1em;"><b>HOME</b></a>
+      <a href="templates/about.html" class="w3-bar-item w3-button w3-hide-small underline-on-hover" style="padding: 1em;"><b>QUIENES SOMOS</b></a>
+      <a href="templates/offices.html" class="w3-bar-item w3-button w3-hide-small underline-on-hover" style="padding: 1em;"><b>OFICINAS</b></a>
+         <div class="w3-dropdown-hover w3-hide-small">
+        <a href="templates/services.html" class="w3-button w3-hide-small w3-button underline-on-hover" style="padding: 1em;"><b>SERVICIOS</b> <i class="fa fa-caret-down"></i></a>
+        <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-round-large">
+          <a href="templates/services.html" class="w3-bar-item w3-button w3-round-large underline-on-hover">TRANSPORTE AÉREO</a>
+          <a href="templates/services.html" class="w3-bar-item w3-button underline-on-hover">TRANSPORTE TERRESTRE</a>
+          <a href="templates/services.html" class="w3-bar-item w3-button underline-on-hover">TRANSPORTE MARÍTIMO</a>
+          <a href="templates/services.html" class="w3-bar-item w3-button w3-round-large underline-on-hover">OTROS SERVICIOS</a>
+        </div>
+      </div>
+      <a href="templates/pqrs.html" class="w3-bar-item w3-button w3-hide-small underline-on-hover" style="padding: 1em;"><b>PQRS</b></a>
       
       <div class="w3-dropdown-hover w3-hide-small">
-        <a href="{% url 'services' %}" class="w3-button w3-hide-small w3-button underline-on-hover" style = "padding: 1em;"><b>SERVICIOS</b> <i class="fa fa-caret-down"></i></a>     
-          <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-round-large">
-            <a href="{% url 'services' %}" class="w3-bar-item w3-button w3-round-large underline-on-hover" >TRANSPORTE AÉREO</a>
-            <a href="{% url 'services' %}" class="w3-bar-item w3-button underline-on-hover">TRANSPORTE TERRESTRE</a>
-            <a href="{% url 'services' %}" class="w3-bar-item w3-button underline-on-hover">TRANSPORTE MARÍTIMO</a>
-            <a href="{% url 'services' %}" class="w3-bar-item w3-button w3-round-large underline-on-hover">OTROS SERVICIOS</a>
-          </div>
+        <a href="templates/team.html" class="w3-button w3-hide-small w3-button underline-on-hover" style="padding: 1em;"><b>DEPARTAMENTOS</b> <i class="fa fa-caret-down"></i></a>
+        <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-round-large">
+          <a href="templates/team.html" class="w3-bar-item w3-button w3-round-large underline-on-hover">IMPORTACIÓN</a>
+          <a href="templates/team.html" class="w3-bar-item w3-button underline-on-hover">EXPORTACIÓN</a>
+          <a href="templates/team.html" class="w3-bar-item w3-button w3-round-large underline-on-hover">CONTABILIDAD</a>
+        </div>
       </div>
-      <a href="{% url 'pqrs' %}" class="w3-bar-item w3-button w3-hide-small underline-on-hover" style = "padding: 1em;"> <b>PQRS</b></a>
-      
-      <div class="w3-dropdown-hover w3-hide-small">
-        <a href="{% url 'team' %}" class="w3-button w3-hide-small w3-button underline-on-hover" style = "padding: 1em;"><b>DEPARTAMENTOS</b> <i class="fa fa-caret-down"></i></a>     
-          <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-round-large">
-            <a href="{% url 'team' %}" class="w3-bar-item w3-button w3-round-large underline-on-hover" >IMPORTACIÓN</a>
-            <a href="{% url 'team' %}" class="w3-bar-item w3-button underline-on-hover">EXPORTACIÓN</a>
-            <a href="{% url 'team' %}" class="w3-bar-item w3-button w3-round-large underline-on-hover">CONTABILIDAD</a>
-          </div>
-      </div>
-        <a class="w3-btn w3-round-xxlarge w3-border w3-border-black w3-white" href="{% url 'index_en' %}" style = "text-decoration: none;">English</a>
-    </div>
-
+      <a class="w3-btn w3-round-xxlarge w3-border w3-border-black w3-white" href="templates/en/index.html" style="text-decoration: none;">English</a>
 
   </div>
 
@@ -121,10 +118,10 @@ body, html {
 
 <div class="bgimg-1 w3-display-container w3-opacity-min">
   <div class="w3-display-middle" >
-    <span class="w3-center w3-padding-large w3-animate-opacity"><img src="{% static 'mainsite/images/Logo-white.png' %}" style="width:100%"></span>
+    <span class="w3-center w3-padding-large w3-animate-opacity"><img src="static/images/Logo-white.png" style="width:100%"></span>
   </div>
   <video autoplay loop id="vid" muted width="100%">
-    <source src="{% static 'mainsite/videos/World1.mp4' %}" type="video/mp4">
+    <source src="static/videos/World1.mp4" type="video/mp4">
   </video>
 </div>
 
@@ -136,11 +133,11 @@ body, html {
     <div class="w3-card" style ="height:560px">
       
       <div class="w3-container">
-        <img src="{% static 'mainsite/images/exports-dep.jpg' %}" style="height: 270px;width:100%">
+        <img src="static/images/exports-dep.jpg" style="height: 270px;width:100%">
         <h3>TRANSPORTE <br>AÉREO</h3>
         <p>Conectamos sus negocios alrededor del mundo con nuestro servicio aéreo de exportación e importación, le aseguramos envíos
            eficientes y rápidos para un comercio global sin complicaciones .</p>
-        <p><a href="{% url 'services' %}" class="w3-button w3-light-blue w3-block">Más información</a></p>
+        <p><a href="templates/services.html" class="w3-button w3-light-blue w3-block">Más información</a></p>
       </div>
     </div>
   </div>
@@ -148,12 +145,12 @@ body, html {
     <div class="w3-card" style ="height:560px">
       
       <div class="w3-container">
-        <img src="{% static 'mainsite/images/trucks-background.jpg' %}" style="height: 270px;width:100%">
+        <img src="static/images/trucks-background.jpg" style="height: 270px;width:100%">
         <h3>TRANSPORTE <br>TERRESTRE</h3>
         
         <p>Optimizamos el comercio internacional con nuestro servicio terrestre de exportación e importación, brindando 
           soluciones logísticas eficientes y seguras para conectar mercados y empresas</p>
-        <p><a href="{% url 'services' %}" class="w3-button w3-light-blue w3-block">Más información</a></p>
+        <p><a href="templates/services.html" class="w3-button w3-light-blue w3-block">Más información</a></p>
       </div>
     </div>
   </div>
@@ -161,12 +158,12 @@ body, html {
     <div class="w3-card" style ="height:560px">
       
       <div class="w3-container">
-        <img src="{% static 'mainsite/images/ship-background.jpg' %}" style="height: 270px;width:100%">
+        <img src="static/images/ship-background.jpg" style="height: 270px;width:100%">
         <h3>TRANSPORTE <br>MARÍTIMO</h3>
         
         <p>Facilitamos el intercambio global con nuestro servicio marítimo de exportación e importación, ofreciendo soluciones
            logísticas confiables para conectar mercados y optimizar la cadena de suministro</p>
-        <p><a href="{% url 'services' %}" class="w3-button w3-light-blue w3-block">Más información</a></p>
+        <p><a href="templates/services.html" class="w3-button w3-light-blue w3-block">Más información</a></p>
       </div>
     </div>
   </div>
@@ -174,7 +171,7 @@ body, html {
     <div class="w3-card" style ="height:560px">
       
       <div class="w3-container">
-        <img src="{% static 'mainsite/images/services2.jpg' %}" style="height: 270px;width:100%">
+        <img src="static/images/services2.jpg" style="height: 270px;width:100%">
         <h3>OTROS SERVICIOS</h3>
           
         <p>Agenciamiento Aduanero</p>
@@ -183,7 +180,7 @@ body, html {
         <p>Courier internacional</p>
         
            
-        <p><a href="{% url 'services' %}" class="w3-button w3-light-blue w3-block">Más información</a></p>
+        <p><a href="templates/services.html" class="w3-button w3-light-blue w3-block">Más información</a></p>
       </div>
     </div>
   </div>
@@ -273,8 +270,8 @@ body, html {
 </div>
 
 <div class="">
-  <img src="{% static 'mainsite/images/Iso280000.jpg' %}" style="width:100px;height:100px;" >
-  <img src="{% static 'mainsite/images/IATA.png' %}" style="width:150px;height:100px;" >
+  <img src="static/images/Iso280000.jpg" style="width:100px;height:100px;" >
+  <img src="static/images/IATA.png" style="width:150px;height:100px;" >
 </div>
   <!-- Empty space -->
   <div class="w3-content w3-container w3-padding-64">
@@ -293,14 +290,13 @@ body, html {
   </div>
   
   <div class="row">
-  <ul>
-  <li><a href="{% url 'pqrs' %}">Contactenos</a></li>
-  <li><a href="{% url 'services' %}">Servicios</a></li>
-  <li><a href="#">Política de Privacidad </a></li>
-  <li><a href="{% url 'index_en' %}">English Version</a></li>
-  </ul>
+    <ul>
+      <li><a href="pqrs.html">Contactenos</a></li>
+      <li><a href="services.html">Servicios</a></li>
+      <li><a href="#">Política de Privacidad</a></li>
+      <li><a href="templates/en/index.html">English Version</a></li>
+    </ul>
   </div>
-  
   <div class="row">
   EUROCARGA © 2023  - Todos los derechos reservados
   </div>
@@ -308,7 +304,7 @@ body, html {
 </footer>
  <!-- SCRIPTS -->
   
-<script src="{% static 'mainsite/js/javs.js' %}"></script>
+<script src="static/js/javs.js"></script>
 
 
 </main>
