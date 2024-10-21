@@ -3,11 +3,11 @@
 {% load static %}
 <head>
 <title>EuroCarga - Servicios</title>
-<link rel="icon" type="image/x-icon" href="{% static 'mainsite/images/favicon.ico' %}">
+<link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" href="{% static 'mainsite/css/styles.css' %}">
+<link rel="stylesheet" href="static/css/styles.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
@@ -36,27 +36,27 @@ body, html {
 
 /* Parallax Images */
 .parall-1 {
-  background-image: url("{% static 'mainsite/images/services.jpg' %}");
+  background-image: url("static/images/services.jpg");
   min-height: 400px;
 }
 .parall-2 {
-  background-image: url("{% static 'mainsite/images/exports-dep.jpg' %}");
+  background-image: url("static/images/exports-dep.jpg");
   min-height: 400px;
 }
 .parall-3 {
-  background-image: url("{% static 'mainsite/images/ship-background.jpg' %}");
+  background-image: url("static/images/ship-background.jpg");
   min-height: 400px;
 }
 .parall-4 {
-  background-image: url("{% static 'mainsite/images/trucks-background.jpg' %}");
+  background-image: url("static/images/trucks-background.jpg");
   min-height: 400px;
 }
 .parall-5 {
-  background-image: url("{% static 'mainsite/images/services.jpg' %}");
+  background-image: url("static/images/services.jpg");
   min-height: 400px;
 }
 .parall-6 {
-  background-image: url("{% static 'mainsite/images/ship-background.jpg' %}");
+  background-image: url("static/images/ship-background.jpg");
   min-height: 400px;
 }
 
@@ -80,15 +80,15 @@ body, html {
   <div class="w3-bar" id="myNavbar" style="text-align: center;">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu" id="myNavbar" style="text-align: center;"></a>
       
-    <a href="#" class="w3-bar-item w3-button"><img src = "{% static 'mainsite/images/logo-noback.png' %}" width="100  " style="opacity:0;" id="toplogo" /></a>
+    <a href="#" class="w3-bar-item w3-button"><img src = "static/images/logo-noback.png" width="100  " style="opacity:0;" id="toplogo" /></a>
     <div id="menu" style="color:white">
       <a href="" class="w3-bar-item " style = "padding-right: 9em"> </a>
-      <a href="{% url 'index' %}" class="w3-bar-item w3-button underline-on-hover" style = "padding: 1em;"><b>HOME</b></a>
-      <a href="{% url 'about' %}" class="w3-bar-item w3-button w3-hide-small underline-on-hover" style = "padding: 1em;"> <b>QUIENES SOMOS</b></a>
-      <a href="{% url 'offices' %}" class="w3-bar-item w3-button w3-hide-small underline-on-hover" style = "padding: 1em;"> <b>OFICINAS</b></a>
+      <a href="templates/index" class="w3-bar-item w3-button underline-on-hover" style = "padding: 1em;"><b>HOME</b></a>
+      <a href="templates/about" class="w3-bar-item w3-button w3-hide-small underline-on-hover" style = "padding: 1em;"> <b>QUIENES SOMOS</b></a>
+      <a href="templates/offices" class="w3-bar-item w3-button w3-hide-small underline-on-hover" style = "padding: 1em;"> <b>OFICINAS</b></a>
       
       <div class="w3-dropdown-hover w3-hide-small">
-        <a href="{% url 'services' %}" class="w3-button w3-hide-small w3-button underline-on-hover" style = "padding: 1em;"><b>SERVICIOS</b> <i class="fa fa-caret-down"></i></a>     
+        <a href="templates/services" class="w3-button w3-hide-small w3-button underline-on-hover" style = "padding: 1em;"><b>SERVICIOS</b> <i class="fa fa-caret-down"></i></a>     
           <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-round-large">
             <a href="transaereo" class="w3-bar-item w3-button w3-round-large underline-on-hover" >TRANSPORTE AÉREO</a>
             <a href="#transterrestre" class="w3-bar-item w3-button underline-on-hover">TRANSPORTE TERRESTRE</a>
@@ -96,14 +96,14 @@ body, html {
             <a href="#otros" class="w3-bar-item w3-button w3-round-large underline-on-hover">OTROS SERVICIOS</a>
           </div>
       </div>
-      <a href="{% url 'pqrs' %}" class="w3-bar-item w3-button w3-hide-small underline-on-hover" style = "padding: 1em;"> <b>PQRS</b></a>
+      <a href="templates/pqrs" class="w3-bar-item w3-button w3-hide-small underline-on-hover" style = "padding: 1em;"> <b>PQRS</b></a>
       
       <div class="w3-dropdown-hover w3-hide-small">
-        <a href="{% url 'team' %}" class="w3-button w3-hide-small w3-button underline-on-hover" style = "padding: 1em;"><b>DEPARTAMENTOS</b> <i class="fa fa-caret-down"></i></a>     
+        <a href="templates/team" class="w3-button w3-hide-small w3-button underline-on-hover" style = "padding: 1em;"><b>DEPARTAMENTOS</b> <i class="fa fa-caret-down"></i></a>     
           <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-round-large">
-            <a href="{% url 'team' %}" class="w3-bar-item w3-button w3-round-large underline-on-hover" >IMPORTACIÓN</a>
-            <a href="{% url 'team' %}" class="w3-bar-item w3-button underline-on-hover">EXPORTACIÓN</a>
-            <a href="{% url 'team' %}" class="w3-bar-item w3-button w3-round-large underline-on-hover">CONTABILIDAD</a>
+            <a href="templates/team" class="w3-bar-item w3-button w3-round-large underline-on-hover" >IMPORTACIÓN</a>
+            <a href="templates/team" class="w3-bar-item w3-button underline-on-hover">EXPORTACIÓN</a>
+            <a href="templates/team" class="w3-bar-item w3-button w3-round-large underline-on-hover">CONTABILIDAD</a>
           </div>
       </div>
     </div>
@@ -327,10 +327,10 @@ body, html {
   
   <div class="row">
   <ul>
-  <li><a href="{% url 'pqrs' %}">Contactenos</a></li>
-  <li><a href="{% url 'services' %}">Servicios</a></li>
+  <li><a href="templates/pqrs">Contactenos</a></li>
+  <li><a href="templates/services">Servicios</a></li>
   <li><a href="#">Política de Privacidad </a></li>
-  <li><a href="{% url 'services_en' %}">English Version</a></li>
+  <li><a href="templates/services_en">English Version</a></li>
   </ul>
   </div>
   
@@ -341,7 +341,7 @@ body, html {
 </footer>
  <!-- SCRIPTS -->
   
-<script src="{% static 'mainsite/js/javs.js' %}"></script>
+<script src="static/js/javs.js"></script>
 
 
 </main>
